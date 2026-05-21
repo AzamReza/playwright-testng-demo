@@ -1,0 +1,810 @@
+[2026-05-21 16:55:38.510] [INFO ] [main] ################################################
+[2026-05-21 16:55:38.511] [INFO ] [main] SUITE START: SauceDemo Automation Suite
+[2026-05-21 16:55:38.512] [INFO ] [main] Configuration loaded successfully
+[2026-05-21 16:55:38.513] [INFO ] [main] Browser: chromium
+[2026-05-21 16:55:38.513] [INFO ] [main] Headless: true
+[2026-05-21 16:55:38.514] [INFO ] [main] Base URL: https://www.saucedemo.com
+[2026-05-21 16:55:38.514] [INFO ] [main] ################################################
+[2026-05-21 17:01:13.918] [INFO ] [main] ################################################
+[2026-05-21 17:01:13.919] [INFO ] [main] SUITE START: SauceDemo Automation Suite
+[2026-05-21 17:01:13.921] [INFO ] [main] Configuration loaded successfully
+[2026-05-21 17:01:13.922] [INFO ] [main] Browser: chromium
+[2026-05-21 17:01:13.923] [INFO ] [main] Headless: true
+[2026-05-21 17:01:13.923] [INFO ] [main] Base URL: https://www.saucedemo.com
+[2026-05-21 17:01:13.923] [INFO ] [main] ################################################
+[2026-05-21 17:01:20.967] [INFO ] [main] Playwright instance created
+[2026-05-21 17:01:20.971] [INFO ] [main] Test Suite starting: Login Tests
+[2026-05-21 17:01:20.985] [INFO ] [main] Launching browser: chromium | headless: true | slowMotion: 0ms
+[2026-05-21 17:01:21.723] [INFO ] [main] chromium browser launched
+[2026-05-21 17:01:21.736] [INFO ] [main] ========================================
+[2026-05-21 17:01:21.737] [INFO ] [main] TEST START: testValidLogin
+[2026-05-21 17:01:21.737] [INFO ] [main] ========================================
+[2026-05-21 17:01:21.871] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:21.875] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:25.272] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:25.273] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:25.273] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:25.319] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:25.337] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:25.458] [INFO ] [main] [PASSED] testValidLogin
+[2026-05-21 17:01:25.460] [INFO ] [main] TEST END: testValidLogin => PASSED
+[2026-05-21 17:01:25.461] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:25.474] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:25.484] [INFO ] [main] ========================================
+[2026-05-21 17:01:25.485] [INFO ] [main] TEST START: testAllUserTypes
+[2026-05-21 17:01:25.485] [INFO ] [main] ========================================
+[2026-05-21 17:01:25.562] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:25.565] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:26.140] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:26.140] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:26.141] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:26.179] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:26.199] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:26.295] [INFO ] [main] [PASSED] testAllUserTypes
+[2026-05-21 17:01:26.296] [INFO ] [main] TEST END: testAllUserTypes => PASSED
+[2026-05-21 17:01:26.296] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:26.302] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:26.305] [INFO ] [main] ========================================
+[2026-05-21 17:01:26.305] [INFO ] [main] TEST START: testAllUserTypes
+[2026-05-21 17:01:26.306] [INFO ] [main] ========================================
+[2026-05-21 17:01:26.405] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:26.406] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:26.971] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:26.971] [INFO ] [main] Attempting login with: locked_out_user (expecting error)
+[2026-05-21 17:01:26.972] [STEP ] [main] >> Typing 'locked_out_user' into #user-name
+[2026-05-21 17:01:27.011] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:27.027] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:27.083] [INFO ] [main] [PASSED] testAllUserTypes
+[2026-05-21 17:01:27.085] [INFO ] [main] TEST END: testAllUserTypes => PASSED
+[2026-05-21 17:01:27.085] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:27.092] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:27.093] [INFO ] [main] ========================================
+[2026-05-21 17:01:27.093] [INFO ] [main] TEST START: testAllUserTypes
+[2026-05-21 17:01:27.094] [INFO ] [main] ========================================
+[2026-05-21 17:01:27.181] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:27.182] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:27.764] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:27.765] [INFO ] [main] Logging in as: problem_user
+[2026-05-21 17:01:27.765] [STEP ] [main] >> Typing 'problem_user' into #user-name
+[2026-05-21 17:01:27.805] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:27.822] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:27.908] [INFO ] [main] [PASSED] testAllUserTypes
+[2026-05-21 17:01:27.909] [INFO ] [main] TEST END: testAllUserTypes => PASSED
+[2026-05-21 17:01:27.910] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:27.914] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:27.916] [INFO ] [main] ========================================
+[2026-05-21 17:01:27.916] [INFO ] [main] TEST START: testAllUserTypes
+[2026-05-21 17:01:27.916] [INFO ] [main] ========================================
+[2026-05-21 17:01:27.999] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:28.001] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:28.584] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:28.585] [INFO ] [main] Logging in as: performance_glitch_user
+[2026-05-21 17:01:28.586] [STEP ] [main] >> Typing 'performance_glitch_user' into #user-name
+[2026-05-21 17:01:28.628] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:28.648] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:33.775] [INFO ] [main] [PASSED] testAllUserTypes
+[2026-05-21 17:01:33.776] [INFO ] [main] TEST END: testAllUserTypes => PASSED
+[2026-05-21 17:01:33.776] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:33.784] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:33.786] [INFO ] [main] ========================================
+[2026-05-21 17:01:33.786] [INFO ] [main] TEST START: testAllUserTypes
+[2026-05-21 17:01:33.788] [INFO ] [main] ========================================
+[2026-05-21 17:01:33.869] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:33.871] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:34.424] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:34.425] [INFO ] [main] Logging in as: error_user
+[2026-05-21 17:01:34.425] [STEP ] [main] >> Typing 'error_user' into #user-name
+[2026-05-21 17:01:34.471] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:34.490] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:34.584] [INFO ] [main] [PASSED] testAllUserTypes
+[2026-05-21 17:01:34.587] [INFO ] [main] TEST END: testAllUserTypes => PASSED
+[2026-05-21 17:01:34.587] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:34.594] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:34.595] [INFO ] [main] ========================================
+[2026-05-21 17:01:34.595] [INFO ] [main] TEST START: testAllUserTypes
+[2026-05-21 17:01:34.596] [INFO ] [main] ========================================
+[2026-05-21 17:01:34.679] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:34.680] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:35.260] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:35.261] [INFO ] [main] Logging in as: visual_user
+[2026-05-21 17:01:35.261] [STEP ] [main] >> Typing 'visual_user' into #user-name
+[2026-05-21 17:01:35.303] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:35.323] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:35.422] [INFO ] [main] [PASSED] testAllUserTypes
+[2026-05-21 17:01:35.424] [INFO ] [main] TEST END: testAllUserTypes => PASSED
+[2026-05-21 17:01:35.425] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:35.430] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:35.434] [INFO ] [main] ========================================
+[2026-05-21 17:01:35.435] [INFO ] [main] TEST START: testInvalidLogin
+[2026-05-21 17:01:35.435] [INFO ] [main] ========================================
+[2026-05-21 17:01:35.517] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:35.520] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:36.114] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:36.116] [INFO ] [main] Attempting login with: locked_out_user (expecting error)
+[2026-05-21 17:01:36.116] [STEP ] [main] >> Typing 'locked_out_user' into #user-name
+[2026-05-21 17:01:36.157] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:36.172] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:36.244] [INFO ] [main] [PASSED] testInvalidLogin
+[2026-05-21 17:01:36.245] [INFO ] [main] TEST END: testInvalidLogin => PASSED
+[2026-05-21 17:01:36.245] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:36.253] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:36.254] [INFO ] [main] ========================================
+[2026-05-21 17:01:36.255] [INFO ] [main] TEST START: testInvalidLogin
+[2026-05-21 17:01:36.255] [INFO ] [main] ========================================
+[2026-05-21 17:01:36.345] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:36.345] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:36.982] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:36.982] [INFO ] [main] Attempting login with: standard_user (expecting error)
+[2026-05-21 17:01:36.982] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:37.021] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:37.038] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:37.105] [INFO ] [main] [PASSED] testInvalidLogin
+[2026-05-21 17:01:37.106] [INFO ] [main] TEST END: testInvalidLogin => PASSED
+[2026-05-21 17:01:37.106] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:37.113] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:37.114] [INFO ] [main] ========================================
+[2026-05-21 17:01:37.115] [INFO ] [main] TEST START: testInvalidLogin
+[2026-05-21 17:01:37.115] [INFO ] [main] ========================================
+[2026-05-21 17:01:37.187] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:37.189] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:37.834] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:37.834] [INFO ] [main] Attempting login with:  (expecting error)
+[2026-05-21 17:01:37.835] [STEP ] [main] >> Typing '' into #user-name
+[2026-05-21 17:01:37.872] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:37.889] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:37.954] [INFO ] [main] [PASSED] testInvalidLogin
+[2026-05-21 17:01:37.955] [INFO ] [main] TEST END: testInvalidLogin => PASSED
+[2026-05-21 17:01:37.956] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:37.965] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:37.966] [INFO ] [main] ========================================
+[2026-05-21 17:01:37.968] [INFO ] [main] TEST START: testInvalidLogin
+[2026-05-21 17:01:37.968] [INFO ] [main] ========================================
+[2026-05-21 17:01:38.041] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:38.043] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:38.618] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:38.619] [INFO ] [main] Attempting login with: standard_user (expecting error)
+[2026-05-21 17:01:38.619] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:38.662] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:38.679] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:38.737] [INFO ] [main] [PASSED] testInvalidLogin
+[2026-05-21 17:01:38.738] [INFO ] [main] TEST END: testInvalidLogin => PASSED
+[2026-05-21 17:01:38.738] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:38.745] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:38.747] [INFO ] [main] ========================================
+[2026-05-21 17:01:38.748] [INFO ] [main] TEST START: testInvalidLogin
+[2026-05-21 17:01:38.748] [INFO ] [main] ========================================
+[2026-05-21 17:01:38.832] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:38.834] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:39.422] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:39.423] [INFO ] [main] Attempting login with:  (expecting error)
+[2026-05-21 17:01:39.423] [STEP ] [main] >> Typing '' into #user-name
+[2026-05-21 17:01:39.462] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:39.480] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:39.551] [INFO ] [main] [PASSED] testInvalidLogin
+[2026-05-21 17:01:39.552] [INFO ] [main] TEST END: testInvalidLogin => PASSED
+[2026-05-21 17:01:39.552] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:39.559] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:39.560] [INFO ] [main] ========================================
+[2026-05-21 17:01:39.560] [INFO ] [main] TEST START: testInvalidLogin
+[2026-05-21 17:01:39.561] [INFO ] [main] ========================================
+[2026-05-21 17:01:39.631] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:39.632] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:40.250] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:40.251] [INFO ] [main] Attempting login with: nonexistent_user (expecting error)
+[2026-05-21 17:01:40.252] [STEP ] [main] >> Typing 'nonexistent_user' into #user-name
+[2026-05-21 17:01:40.289] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:40.304] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:40.369] [INFO ] [main] [PASSED] testInvalidLogin
+[2026-05-21 17:01:40.370] [INFO ] [main] TEST END: testInvalidLogin => PASSED
+[2026-05-21 17:01:40.370] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:40.376] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:40.380] [INFO ] [main] ========================================
+[2026-05-21 17:01:40.380] [INFO ] [main] TEST START: testLockedOutUser
+[2026-05-21 17:01:40.381] [INFO ] [main] ========================================
+[2026-05-21 17:01:40.459] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:40.460] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:41.011] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:41.011] [INFO ] [main] Attempting login with: locked_out_user (expecting error)
+[2026-05-21 17:01:41.012] [STEP ] [main] >> Typing 'locked_out_user' into #user-name
+[2026-05-21 17:01:41.051] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:41.066] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:41.136] [INFO ] [main] [PASSED] testLockedOutUser
+[2026-05-21 17:01:41.136] [INFO ] [main] TEST END: testLockedOutUser => PASSED
+[2026-05-21 17:01:41.137] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:41.142] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:41.145] [INFO ] [main] ========================================
+[2026-05-21 17:01:41.146] [INFO ] [main] TEST START: testCloseErrorMessage
+[2026-05-21 17:01:41.147] [INFO ] [main] ========================================
+[2026-05-21 17:01:41.228] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:41.229] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:41.813] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:41.813] [INFO ] [main] Attempting login with:  (expecting error)
+[2026-05-21 17:01:41.814] [STEP ] [main] >> Typing '' into #user-name
+[2026-05-21 17:01:41.849] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:41.864] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:41.925] [STEP ] [main] >> Clicking: .error-button
+[2026-05-21 17:01:41.967] [INFO ] [main] [PASSED] testCloseErrorMessage
+[2026-05-21 17:01:41.968] [INFO ] [main] TEST END: testCloseErrorMessage => PASSED
+[2026-05-21 17:01:41.968] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:41.973] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:41.975] [INFO ] [main] ========================================
+[2026-05-21 17:01:41.975] [INFO ] [main] TEST START: testLogout
+[2026-05-21 17:01:41.975] [INFO ] [main] ========================================
+[2026-05-21 17:01:42.049] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:42.050] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:42.642] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:42.644] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:42.644] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:42.684] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:42.702] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:42.794] [STEP ] [main] >> Logging out
+[2026-05-21 17:01:42.794] [STEP ] [main] >> Clicking: #react-burger-menu-btn
+[2026-05-21 17:01:42.851] [STEP ] [main] >> Clicking: #logout_sidebar_link
+[2026-05-21 17:01:43.793] [INFO ] [main] [PASSED] testLogout
+[2026-05-21 17:01:43.794] [INFO ] [main] TEST END: testLogout => PASSED
+[2026-05-21 17:01:43.795] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:43.800] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:43.854] [INFO ] [main] Browser closed
+[2026-05-21 17:01:43.856] [INFO ] [main] 
+[2026-05-21 17:01:43.856] [INFO ] [main] ==========================================
+[2026-05-21 17:01:43.857] [INFO ] [main]          FINAL TEST RESULTS               
+[2026-05-21 17:01:43.857] [INFO ] [main] ==========================================
+[2026-05-21 17:01:43.857] [INFO ] [main]   Passed  : 16
+[2026-05-21 17:01:43.858] [INFO ] [main]   Failed  : 0
+[2026-05-21 17:01:43.858] [INFO ] [main]   Skipped : 0
+[2026-05-21 17:01:43.858] [INFO ] [main]   Total   : 16
+[2026-05-21 17:01:43.860] [INFO ] [main]   Pass Rate: 100.0%
+[2026-05-21 17:01:43.860] [INFO ] [main] ==========================================
+[2026-05-21 17:01:43.888] [INFO ] [main] Test Suite starting: Products Tests
+[2026-05-21 17:01:43.889] [INFO ] [main] Launching browser: chromium | headless: true | slowMotion: 0ms
+[2026-05-21 17:01:44.041] [INFO ] [main] chromium browser launched
+[2026-05-21 17:01:44.043] [INFO ] [main] ========================================
+[2026-05-21 17:01:44.043] [INFO ] [main] TEST START: testProductsPageLoads
+[2026-05-21 17:01:44.043] [INFO ] [main] ========================================
+[2026-05-21 17:01:44.170] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:44.171] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:44.795] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:44.796] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:44.796] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:44.833] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:44.848] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:44.947] [INFO ] [main] [PASSED] testProductsPageLoads
+[2026-05-21 17:01:44.948] [INFO ] [main] TEST END: testProductsPageLoads => PASSED
+[2026-05-21 17:01:44.948] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:44.953] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:44.956] [INFO ] [main] ========================================
+[2026-05-21 17:01:44.956] [INFO ] [main] TEST START: testProductCount
+[2026-05-21 17:01:44.956] [INFO ] [main] ========================================
+[2026-05-21 17:01:45.033] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:45.034] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:45.594] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:45.594] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:45.594] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:45.630] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:45.646] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:45.719] [INFO ] [main] [PASSED] testProductCount
+[2026-05-21 17:01:45.720] [INFO ] [main] TEST END: testProductCount => PASSED
+[2026-05-21 17:01:45.721] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:45.727] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:45.729] [INFO ] [main] ========================================
+[2026-05-21 17:01:45.729] [INFO ] [main] TEST START: testProductNamesDisplayed
+[2026-05-21 17:01:45.729] [INFO ] [main] ========================================
+[2026-05-21 17:01:45.822] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:45.823] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:46.370] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:46.371] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:46.371] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:46.407] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:46.423] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:46.508] [INFO ] [main] [PASSED] testProductNamesDisplayed
+[2026-05-21 17:01:46.509] [INFO ] [main] TEST END: testProductNamesDisplayed => PASSED
+[2026-05-21 17:01:46.509] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:46.514] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:46.516] [INFO ] [main] ========================================
+[2026-05-21 17:01:46.516] [INFO ] [main] TEST START: testProductPricesValid
+[2026-05-21 17:01:46.516] [INFO ] [main] ========================================
+[2026-05-21 17:01:46.594] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:46.595] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:47.212] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:47.213] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:47.213] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:47.254] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:47.272] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:47.353] [INFO ] [main] [PASSED] testProductPricesValid
+[2026-05-21 17:01:47.353] [INFO ] [main] TEST END: testProductPricesValid => PASSED
+[2026-05-21 17:01:47.355] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:47.361] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:47.363] [INFO ] [main] ========================================
+[2026-05-21 17:01:47.363] [INFO ] [main] TEST START: testSortByNameAZ
+[2026-05-21 17:01:47.363] [INFO ] [main] ========================================
+[2026-05-21 17:01:47.460] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:47.461] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:48.180] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:48.181] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:48.181] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:48.244] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:48.263] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:48.344] [STEP ] [main] >> Sorting: Name (A to Z)
+[2026-05-21 17:01:48.345] [STEP ] [main] >> Selecting value 'az' from [data-test='product-sort-container']
+[2026-05-21 17:01:48.367] [INFO ] [main] [PASSED] testSortByNameAZ
+[2026-05-21 17:01:48.369] [INFO ] [main] TEST END: testSortByNameAZ => PASSED
+[2026-05-21 17:01:48.369] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:48.375] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:48.377] [INFO ] [main] ========================================
+[2026-05-21 17:01:48.377] [INFO ] [main] TEST START: testSortByNameZA
+[2026-05-21 17:01:48.377] [INFO ] [main] ========================================
+[2026-05-21 17:01:48.464] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:48.465] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:49.025] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:49.027] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:49.027] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:49.071] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:49.090] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:49.171] [STEP ] [main] >> Sorting: Name (Z to A)
+[2026-05-21 17:01:49.171] [STEP ] [main] >> Selecting value 'za' from [data-test='product-sort-container']
+[2026-05-21 17:01:49.203] [INFO ] [main] [PASSED] testSortByNameZA
+[2026-05-21 17:01:49.203] [INFO ] [main] TEST END: testSortByNameZA => PASSED
+[2026-05-21 17:01:49.205] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:49.211] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:49.212] [INFO ] [main] ========================================
+[2026-05-21 17:01:49.213] [INFO ] [main] TEST START: testSortByPriceLowToHigh
+[2026-05-21 17:01:49.213] [INFO ] [main] ========================================
+[2026-05-21 17:01:49.286] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:49.287] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:49.854] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:49.855] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:49.856] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:49.896] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:49.913] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:49.996] [STEP ] [main] >> Sorting: Price (Low to High)
+[2026-05-21 17:01:49.997] [STEP ] [main] >> Selecting value 'lohi' from [data-test='product-sort-container']
+[2026-05-21 17:01:50.016] [INFO ] [main] [PASSED] testSortByPriceLowToHigh
+[2026-05-21 17:01:50.017] [INFO ] [main] TEST END: testSortByPriceLowToHigh => PASSED
+[2026-05-21 17:01:50.017] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:50.024] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:50.026] [INFO ] [main] ========================================
+[2026-05-21 17:01:50.026] [INFO ] [main] TEST START: testSortByPriceHighToLow
+[2026-05-21 17:01:50.026] [INFO ] [main] ========================================
+[2026-05-21 17:01:50.126] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:50.127] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:50.785] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:50.785] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:50.786] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:50.823] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:50.837] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:50.910] [STEP ] [main] >> Sorting: Price (High to Low)
+[2026-05-21 17:01:50.911] [STEP ] [main] >> Selecting value 'hilo' from [data-test='product-sort-container']
+[2026-05-21 17:01:50.930] [INFO ] [main] [PASSED] testSortByPriceHighToLow
+[2026-05-21 17:01:50.931] [INFO ] [main] TEST END: testSortByPriceHighToLow => PASSED
+[2026-05-21 17:01:50.932] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:50.938] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:50.941] [INFO ] [main] ========================================
+[2026-05-21 17:01:50.942] [INFO ] [main] TEST START: testAddSingleItemToCart
+[2026-05-21 17:01:50.942] [INFO ] [main] ========================================
+[2026-05-21 17:01:51.028] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:51.030] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:51.597] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:51.597] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:51.598] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:51.634] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:51.652] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:51.731] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:01:51.731] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:01:51.789] [INFO ] [main] [PASSED] testAddSingleItemToCart
+[2026-05-21 17:01:51.790] [INFO ] [main] TEST END: testAddSingleItemToCart => PASSED
+[2026-05-21 17:01:51.790] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:51.795] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:51.797] [INFO ] [main] ========================================
+[2026-05-21 17:01:51.798] [INFO ] [main] TEST START: testAddMultipleItemsToCart
+[2026-05-21 17:01:51.798] [INFO ] [main] ========================================
+[2026-05-21 17:01:51.896] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:51.897] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:52.451] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:52.452] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:52.452] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:52.495] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:52.514] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:52.598] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:01:52.599] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:01:52.646] [STEP ] [main] >> Adding to cart: sauce-labs-bike-light
+[2026-05-21 17:01:52.647] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-bike-light']
+[2026-05-21 17:01:52.678] [STEP ] [main] >> Adding to cart: sauce-labs-bolt-t-shirt
+[2026-05-21 17:01:52.678] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-bolt-t-shirt']
+[2026-05-21 17:01:52.744] [INFO ] [main] [PASSED] testAddMultipleItemsToCart
+[2026-05-21 17:01:52.745] [INFO ] [main] TEST END: testAddMultipleItemsToCart => PASSED
+[2026-05-21 17:01:52.746] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:52.754] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:52.754] [INFO ] [main] ========================================
+[2026-05-21 17:01:52.754] [INFO ] [main] TEST START: testAddAllItemsToCart
+[2026-05-21 17:01:52.754] [INFO ] [main] ========================================
+[2026-05-21 17:01:52.833] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:52.835] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:53.440] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:53.441] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:53.441] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:53.478] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:53.493] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:53.579] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:01:53.580] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:01:53.634] [STEP ] [main] >> Adding to cart: sauce-labs-bike-light
+[2026-05-21 17:01:53.635] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-bike-light']
+[2026-05-21 17:01:53.681] [STEP ] [main] >> Adding to cart: sauce-labs-bolt-t-shirt
+[2026-05-21 17:01:53.681] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-bolt-t-shirt']
+[2026-05-21 17:01:53.732] [STEP ] [main] >> Adding to cart: sauce-labs-fleece-jacket
+[2026-05-21 17:01:53.733] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-fleece-jacket']
+[2026-05-21 17:01:53.785] [STEP ] [main] >> Adding to cart: sauce-labs-onesie
+[2026-05-21 17:01:53.786] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-onesie']
+[2026-05-21 17:01:53.831] [STEP ] [main] >> Adding to cart: test.allthethings()-t-shirt-(red)
+[2026-05-21 17:01:53.832] [STEP ] [main] >> Clicking: [data-test='add-to-cart-test.allthethings()-t-shirt-(red)']
+[2026-05-21 17:01:53.891] [INFO ] [main] [PASSED] testAddAllItemsToCart
+[2026-05-21 17:01:53.892] [INFO ] [main] TEST END: testAddAllItemsToCart => PASSED
+[2026-05-21 17:01:53.893] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:53.897] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:53.899] [INFO ] [main] ========================================
+[2026-05-21 17:01:53.899] [INFO ] [main] TEST START: testRemoveItemFromProductsPage
+[2026-05-21 17:01:53.900] [INFO ] [main] ========================================
+[2026-05-21 17:01:53.973] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:53.974] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:54.578] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:54.578] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:54.578] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:54.619] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:54.637] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:54.711] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:01:54.711] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:01:54.778] [STEP ] [main] >> Removing from cart: sauce-labs-backpack
+[2026-05-21 17:01:54.779] [STEP ] [main] >> Clicking: [data-test='remove-sauce-labs-backpack']
+[2026-05-21 17:01:54.816] [INFO ] [main] [PASSED] testRemoveItemFromProductsPage
+[2026-05-21 17:01:54.816] [INFO ] [main] TEST END: testRemoveItemFromProductsPage => PASSED
+[2026-05-21 17:01:54.817] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:54.821] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:54.824] [INFO ] [main] ========================================
+[2026-05-21 17:01:54.824] [INFO ] [main] TEST START: testAddAndRemoveMultiple
+[2026-05-21 17:01:54.824] [INFO ] [main] ========================================
+[2026-05-21 17:01:54.897] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:54.898] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:55.517] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:55.518] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:55.518] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:55.586] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:55.601] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:55.684] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:01:55.685] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:01:55.742] [STEP ] [main] >> Adding to cart: sauce-labs-bike-light
+[2026-05-21 17:01:55.742] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-bike-light']
+[2026-05-21 17:01:55.805] [STEP ] [main] >> Removing from cart: sauce-labs-backpack
+[2026-05-21 17:01:55.805] [STEP ] [main] >> Clicking: [data-test='remove-sauce-labs-backpack']
+[2026-05-21 17:01:55.886] [INFO ] [main] [PASSED] testAddAndRemoveMultiple
+[2026-05-21 17:01:55.886] [INFO ] [main] TEST END: testAddAndRemoveMultiple => PASSED
+[2026-05-21 17:01:55.887] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:55.894] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:55.939] [INFO ] [main] Browser closed
+[2026-05-21 17:01:55.940] [INFO ] [main] 
+[2026-05-21 17:01:55.941] [INFO ] [main] ==========================================
+[2026-05-21 17:01:55.941] [INFO ] [main]          FINAL TEST RESULTS               
+[2026-05-21 17:01:55.941] [INFO ] [main] ==========================================
+[2026-05-21 17:01:55.942] [INFO ] [main]   Passed  : 29
+[2026-05-21 17:01:55.942] [INFO ] [main]   Failed  : 0
+[2026-05-21 17:01:55.942] [INFO ] [main]   Skipped : 0
+[2026-05-21 17:01:55.942] [INFO ] [main]   Total   : 29
+[2026-05-21 17:01:55.942] [INFO ] [main]   Pass Rate: 100.0%
+[2026-05-21 17:01:55.942] [INFO ] [main] ==========================================
+[2026-05-21 17:01:55.948] [INFO ] [main] Test Suite starting: Cart Tests
+[2026-05-21 17:01:55.948] [INFO ] [main] Launching browser: chromium | headless: true | slowMotion: 0ms
+[2026-05-21 17:01:56.093] [INFO ] [main] chromium browser launched
+[2026-05-21 17:01:56.093] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.095] [INFO ] [main] TEST START: testEmptyCartPage
+[2026-05-21 17:01:56.095] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.208] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:56.211] [ERROR] [main] [FAILED] testEmptyCartPage
+[2026-05-21 17:01:56.211] [ERROR] [main]   Reason: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.goToCart()" because "productsPage" is null
+[2026-05-21 17:01:56.340] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testEmptyCartPage_2026-05-21_17-01-56.png
+[2026-05-21 17:01:56.340] [ERROR] [main] Test FAILED: testEmptyCartPage
+[2026-05-21 17:01:56.340] [ERROR] [main] Error: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.goToCart()" because "productsPage" is null
+[2026-05-21 17:01:56.340] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testEmptyCartPage_2026-05-21_17-01-56.png
+[2026-05-21 17:01:56.341] [INFO ] [main] TEST END: testEmptyCartPage => FAILED
+[2026-05-21 17:01:56.341] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:56.345] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:56.347] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.347] [INFO ] [main] TEST START: testSingleItemInCart
+[2026-05-21 17:01:56.347] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.422] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:56.423] [ERROR] [main] [FAILED] testSingleItemInCart
+[2026-05-21 17:01:56.423] [ERROR] [main]   Reason: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:56.539] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testSingleItemInCart_2026-05-21_17-01-56.png
+[2026-05-21 17:01:56.540] [ERROR] [main] Test FAILED: testSingleItemInCart
+[2026-05-21 17:01:56.540] [ERROR] [main] Error: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:56.540] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testSingleItemInCart_2026-05-21_17-01-56.png
+[2026-05-21 17:01:56.540] [INFO ] [main] TEST END: testSingleItemInCart => FAILED
+[2026-05-21 17:01:56.541] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:56.545] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:56.546] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.546] [INFO ] [main] TEST START: testMultipleItemsInCart
+[2026-05-21 17:01:56.547] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.617] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:56.620] [ERROR] [main] [FAILED] testMultipleItemsInCart
+[2026-05-21 17:01:56.620] [ERROR] [main]   Reason: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:56.737] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testMultipleItemsInCart_2026-05-21_17-01-56.png
+[2026-05-21 17:01:56.737] [ERROR] [main] Test FAILED: testMultipleItemsInCart
+[2026-05-21 17:01:56.738] [ERROR] [main] Error: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:56.738] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testMultipleItemsInCart_2026-05-21_17-01-56.png
+[2026-05-21 17:01:56.738] [INFO ] [main] TEST END: testMultipleItemsInCart => FAILED
+[2026-05-21 17:01:56.738] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:56.743] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:56.744] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.745] [INFO ] [main] TEST START: testRemoveItemFromCart
+[2026-05-21 17:01:56.745] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.814] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:56.815] [ERROR] [main] [FAILED] testRemoveItemFromCart
+[2026-05-21 17:01:56.816] [ERROR] [main]   Reason: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:56.937] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testRemoveItemFromCart_2026-05-21_17-01-56.png
+[2026-05-21 17:01:56.937] [ERROR] [main] Test FAILED: testRemoveItemFromCart
+[2026-05-21 17:01:56.937] [ERROR] [main] Error: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:56.938] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testRemoveItemFromCart_2026-05-21_17-01-56.png
+[2026-05-21 17:01:56.938] [INFO ] [main] TEST END: testRemoveItemFromCart => FAILED
+[2026-05-21 17:01:56.938] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:56.944] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:56.945] [INFO ] [main] ========================================
+[2026-05-21 17:01:56.945] [INFO ] [main] TEST START: testRemoveAllItemsFromCart
+[2026-05-21 17:01:56.946] [INFO ] [main] ========================================
+[2026-05-21 17:01:57.016] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:57.017] [ERROR] [main] [FAILED] testRemoveAllItemsFromCart
+[2026-05-21 17:01:57.017] [ERROR] [main]   Reason: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:57.135] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testRemoveAllItemsFromCart_2026-05-21_17-01-57.png
+[2026-05-21 17:01:57.135] [ERROR] [main] Test FAILED: testRemoveAllItemsFromCart
+[2026-05-21 17:01:57.135] [ERROR] [main] Error: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:57.136] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testRemoveAllItemsFromCart_2026-05-21_17-01-57.png
+[2026-05-21 17:01:57.136] [INFO ] [main] TEST END: testRemoveAllItemsFromCart => FAILED
+[2026-05-21 17:01:57.136] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:57.140] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:57.141] [INFO ] [main] ========================================
+[2026-05-21 17:01:57.142] [INFO ] [main] TEST START: testContinueShopping
+[2026-05-21 17:01:57.142] [INFO ] [main] ========================================
+[2026-05-21 17:01:57.222] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:57.223] [ERROR] [main] [FAILED] testContinueShopping
+[2026-05-21 17:01:57.224] [ERROR] [main]   Reason: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:57.335] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testContinueShopping_2026-05-21_17-01-57.png
+[2026-05-21 17:01:57.336] [ERROR] [main] Test FAILED: testContinueShopping
+[2026-05-21 17:01:57.336] [ERROR] [main] Error: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:57.336] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testContinueShopping_2026-05-21_17-01-57.png
+[2026-05-21 17:01:57.336] [INFO ] [main] TEST END: testContinueShopping => FAILED
+[2026-05-21 17:01:57.337] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:57.341] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:57.342] [INFO ] [main] ========================================
+[2026-05-21 17:01:57.343] [INFO ] [main] TEST START: testProceedToCheckout
+[2026-05-21 17:01:57.343] [INFO ] [main] ========================================
+[2026-05-21 17:01:57.422] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:57.424] [ERROR] [main] [FAILED] testProceedToCheckout
+[2026-05-21 17:01:57.424] [ERROR] [main]   Reason: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:57.536] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testProceedToCheckout_2026-05-21_17-01-57.png
+[2026-05-21 17:01:57.537] [ERROR] [main] Test FAILED: testProceedToCheckout
+[2026-05-21 17:01:57.537] [ERROR] [main] Error: Cannot invoke "com.bjit.ecauto.pages.ProductsPage.addBackpackToCart()" because "productsPage" is null
+[2026-05-21 17:01:57.537] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testProceedToCheckout_2026-05-21_17-01-57.png
+[2026-05-21 17:01:57.537] [INFO ] [main] TEST END: testProceedToCheckout => FAILED
+[2026-05-21 17:01:57.538] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:57.541] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:57.581] [INFO ] [main] Browser closed
+[2026-05-21 17:01:57.581] [INFO ] [main] 
+[2026-05-21 17:01:57.582] [INFO ] [main] ==========================================
+[2026-05-21 17:01:57.582] [INFO ] [main]          FINAL TEST RESULTS               
+[2026-05-21 17:01:57.582] [INFO ] [main] ==========================================
+[2026-05-21 17:01:57.582] [INFO ] [main]   Passed  : 29
+[2026-05-21 17:01:57.582] [INFO ] [main]   Failed  : 7
+[2026-05-21 17:01:57.583] [INFO ] [main]   Skipped : 0
+[2026-05-21 17:01:57.583] [INFO ] [main]   Total   : 36
+[2026-05-21 17:01:57.583] [INFO ] [main]   Pass Rate: 80.6%
+[2026-05-21 17:01:57.583] [INFO ] [main] ==========================================
+[2026-05-21 17:01:57.595] [INFO ] [main] Test Suite starting: Checkout Tests
+[2026-05-21 17:01:57.596] [INFO ] [main] Launching browser: chromium | headless: true | slowMotion: 0ms
+[2026-05-21 17:01:57.720] [INFO ] [main] chromium browser launched
+[2026-05-21 17:01:57.721] [INFO ] [main] ========================================
+[2026-05-21 17:01:57.721] [INFO ] [main] TEST START: testCheckoutStepOneLoads
+[2026-05-21 17:01:57.722] [INFO ] [main] ========================================
+[2026-05-21 17:01:57.823] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:57.824] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:58.405] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:58.405] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:58.406] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:58.444] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:58.460] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:58.525] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:01:58.525] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:01:58.577] [STEP ] [main] >> Navigating to cart
+[2026-05-21 17:01:58.577] [STEP ] [main] >> Clicking: .shopping_cart_link
+[2026-05-21 17:01:58.621] [STEP ] [main] >> Proceeding to checkout
+[2026-05-21 17:01:58.621] [STEP ] [main] >> Clicking: [data-test='checkout']
+[2026-05-21 17:01:58.686] [INFO ] [main] [PASSED] testCheckoutStepOneLoads
+[2026-05-21 17:01:58.687] [INFO ] [main] TEST END: testCheckoutStepOneLoads => PASSED
+[2026-05-21 17:01:58.688] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:58.693] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:58.695] [ERROR] [main] [FAILED] testValidCheckoutInfo
+[2026-05-21 17:01:58.696] [ERROR] [main]   Reason: 
+Method public void com.bjit.ecauto.tests.CheckoutTest.testValidCheckoutInfo(java.lang.String,java.lang.String,java.lang.String) requires a @DataProvider named : checkoutValidData in class com.bjit.ecauto.dataproviders.TestDataProviders
+[2026-05-21 17:01:58.698] [ERROR] [main] [FAILED] testInvalidCheckoutInfo
+[2026-05-21 17:01:58.699] [ERROR] [main]   Reason: 
+Method public void com.bjit.ecauto.tests.CheckoutTest.testInvalidCheckoutInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String) requires a @DataProvider named : checkoutInvalidData in class com.bjit.ecauto.dataproviders.TestDataProviders
+[2026-05-21 17:01:58.700] [INFO ] [main] ========================================
+[2026-05-21 17:01:58.702] [INFO ] [main] TEST START: testAllFieldsEmpty
+[2026-05-21 17:01:58.702] [INFO ] [main] ========================================
+[2026-05-21 17:01:58.793] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:58.794] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:01:59.358] [INFO ] [main] Login page loaded
+[2026-05-21 17:01:59.358] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:01:59.358] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:01:59.394] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:01:59.412] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:01:59.495] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:01:59.496] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:01:59.552] [STEP ] [main] >> Navigating to cart
+[2026-05-21 17:01:59.553] [STEP ] [main] >> Clicking: .shopping_cart_link
+[2026-05-21 17:01:59.602] [STEP ] [main] >> Proceeding to checkout
+[2026-05-21 17:01:59.603] [STEP ] [main] >> Clicking: [data-test='checkout']
+[2026-05-21 17:01:59.652] [STEP ] [main] >> Clicking: [data-test='continue']
+[2026-05-21 17:01:59.726] [INFO ] [main] [PASSED] testAllFieldsEmpty
+[2026-05-21 17:01:59.727] [INFO ] [main] TEST END: testAllFieldsEmpty => PASSED
+[2026-05-21 17:01:59.727] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:01:59.734] [DEBUG] [main] Browser context closed
+[2026-05-21 17:01:59.736] [INFO ] [main] ========================================
+[2026-05-21 17:01:59.736] [INFO ] [main] TEST START: testCancelOnStepOne
+[2026-05-21 17:01:59.736] [INFO ] [main] ========================================
+[2026-05-21 17:01:59.813] [INFO ] [main] New browser context and page created
+[2026-05-21 17:01:59.814] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:02:00.360] [INFO ] [main] Login page loaded
+[2026-05-21 17:02:00.360] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:02:00.360] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:02:00.401] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:02:00.419] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:02:00.494] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:02:00.494] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:02:00.541] [STEP ] [main] >> Navigating to cart
+[2026-05-21 17:02:00.541] [STEP ] [main] >> Clicking: .shopping_cart_link
+[2026-05-21 17:02:00.584] [STEP ] [main] >> Proceeding to checkout
+[2026-05-21 17:02:00.584] [STEP ] [main] >> Clicking: [data-test='checkout']
+[2026-05-21 17:02:00.635] [STEP ] [main] >> Clicking: [data-test='cancel']
+[2026-05-21 17:02:00.696] [INFO ] [main] [PASSED] testCancelOnStepOne
+[2026-05-21 17:02:00.697] [INFO ] [main] TEST END: testCancelOnStepOne => PASSED
+[2026-05-21 17:02:00.697] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:02:00.703] [DEBUG] [main] Browser context closed
+[2026-05-21 17:02:00.705] [INFO ] [main] ========================================
+[2026-05-21 17:02:00.706] [INFO ] [main] TEST START: testOverviewShowsSingleItem
+[2026-05-21 17:02:00.706] [INFO ] [main] ========================================
+[2026-05-21 17:02:00.795] [INFO ] [main] New browser context and page created
+[2026-05-21 17:02:00.795] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:02:01.432] [INFO ] [main] Login page loaded
+[2026-05-21 17:02:01.432] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:02:01.433] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:02:01.483] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:02:01.506] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:02:01.577] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:02:01.577] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:02:01.632] [STEP ] [main] >> Navigating to cart
+[2026-05-21 17:02:01.632] [STEP ] [main] >> Clicking: .shopping_cart_link
+[2026-05-21 17:02:01.686] [STEP ] [main] >> Proceeding to checkout
+[2026-05-21 17:02:01.686] [STEP ] [main] >> Clicking: [data-test='checkout']
+[2026-05-21 17:02:01.739] [STEP ] [main] >> Typing 'John' into [data-test='firstName']
+[2026-05-21 17:02:01.758] [STEP ] [main] >> Typing 'Doe' into [data-test='lastName']
+[2026-05-21 17:02:01.777] [STEP ] [main] >> Typing '12345' into [data-test='postalCode']
+[2026-05-21 17:02:01.797] [STEP ] [main] >> Clicking: [data-test='continue']
+[2026-05-21 17:02:01.879] [INFO ] [main] [PASSED] testOverviewShowsSingleItem
+[2026-05-21 17:02:01.880] [INFO ] [main] TEST END: testOverviewShowsSingleItem => PASSED
+[2026-05-21 17:02:01.880] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:02:01.887] [DEBUG] [main] Browser context closed
+[2026-05-21 17:02:01.889] [INFO ] [main] ========================================
+[2026-05-21 17:02:01.890] [INFO ] [main] TEST START: testOverviewShowsMultipleItems
+[2026-05-21 17:02:01.890] [INFO ] [main] ========================================
+[2026-05-21 17:02:01.994] [INFO ] [main] New browser context and page created
+[2026-05-21 17:02:01.996] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:02:02.554] [INFO ] [main] Login page loaded
+[2026-05-21 17:02:02.554] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:02:02.554] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:02:02.603] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:02:02.621] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:02:02.694] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:02:02.694] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:02:02.756] [STEP ] [main] >> Adding to cart: sauce-labs-bike-light
+[2026-05-21 17:02:02.756] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-bike-light']
+[2026-05-21 17:02:02.798] [STEP ] [main] >> Adding to cart: sauce-labs-onesie
+[2026-05-21 17:02:02.798] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-onesie']
+[2026-05-21 17:02:02.846] [STEP ] [main] >> Navigating to cart
+[2026-05-21 17:02:02.846] [STEP ] [main] >> Clicking: .shopping_cart_link
+[2026-05-21 17:02:02.905] [STEP ] [main] >> Proceeding to checkout
+[2026-05-21 17:02:02.905] [STEP ] [main] >> Clicking: [data-test='checkout']
+[2026-05-21 17:02:02.959] [STEP ] [main] >> Typing 'Jane' into [data-test='firstName']
+[2026-05-21 17:02:02.983] [STEP ] [main] >> Typing 'Smith' into [data-test='lastName']
+[2026-05-21 17:02:02.999] [STEP ] [main] >> Typing '54321' into [data-test='postalCode']
+[2026-05-21 17:02:03.015] [STEP ] [main] >> Clicking: [data-test='continue']
+[2026-05-21 17:02:03.084] [INFO ] [main] [PASSED] testOverviewShowsMultipleItems
+[2026-05-21 17:02:03.085] [INFO ] [main] TEST END: testOverviewShowsMultipleItems => PASSED
+[2026-05-21 17:02:03.085] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:02:03.090] [DEBUG] [main] Browser context closed
+[2026-05-21 17:02:03.092] [INFO ] [main] ========================================
+[2026-05-21 17:02:03.092] [INFO ] [main] TEST START: testSubtotalSingleItem
+[2026-05-21 17:02:03.093] [INFO ] [main] ========================================
+[2026-05-21 17:02:03.166] [INFO ] [main] New browser context and page created
+[2026-05-21 17:02:03.166] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:02:06.250] [INFO ] [main] Login page loaded
+[2026-05-21 17:02:06.250] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:02:06.251] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:02:06.295] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:02:06.313] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:02:06.408] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:02:06.409] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:02:06.453] [STEP ] [main] >> Navigating to cart
+[2026-05-21 17:02:06.453] [STEP ] [main] >> Clicking: .shopping_cart_link
+[2026-05-21 17:02:06.509] [STEP ] [main] >> Proceeding to checkout
+[2026-05-21 17:02:06.510] [STEP ] [main] >> Clicking: [data-test='checkout']
+[2026-05-21 17:02:06.570] [STEP ] [main] >> Typing 'John' into [data-test='firstName']
+[2026-05-21 17:02:06.596] [STEP ] [main] >> Typing 'Doe' into [data-test='lastName']
+[2026-05-21 17:02:06.615] [STEP ] [main] >> Typing '12345' into [data-test='postalCode']
+[2026-05-21 17:02:06.636] [STEP ] [main] >> Clicking: [data-test='continue']
+[2026-05-21 17:02:06.719] [INFO ] [main] [PASSED] testSubtotalSingleItem
+[2026-05-21 17:02:06.720] [INFO ] [main] TEST END: testSubtotalSingleItem => PASSED
+[2026-05-21 17:02:06.720] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:02:06.726] [DEBUG] [main] Browser context closed
+[2026-05-21 17:02:06.729] [INFO ] [main] ========================================
+[2026-05-21 17:02:06.729] [INFO ] [main] TEST START: testSubtotalMultipleItems
+[2026-05-21 17:02:06.729] [INFO ] [main] ========================================
+[2026-05-21 17:02:06.810] [INFO ] [main] New browser context and page created
+[2026-05-21 17:02:06.811] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:02:07.398] [INFO ] [main] Login page loaded
+[2026-05-21 17:02:07.398] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:02:07.399] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:02:07.437] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:02:07.454] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:02:07.536] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:02:07.536] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:02:07.589] [STEP ] [main] >> Adding to cart: sauce-labs-bike-light
+[2026-05-21 17:02:07.589] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-bike-light']
+[2026-05-21 17:02:07.629] [STEP ] [main] >> Adding to cart: sauce-labs-onesie
+[2026-05-21 17:02:07.630] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-onesie']
+[2026-05-21 17:02:07.684] [STEP ] [main] >> Navigating to cart
+[2026-05-21 17:02:07.684] [STEP ] [main] >> Clicking: .shopping_cart_link
+[2026-05-21 17:02:07.737] [STEP ] [main] >> Proceeding to checkout
+[2026-05-21 17:02:07.737] [STEP ] [main] >> Clicking: [data-test='checkout']
+[2026-05-21 17:02:07.789] [STEP ] [main] >> Typing 'Jane' into [data-test='firstName']
+[2026-05-21 17:02:07.809] [STEP ] [main] >> Typing 'Smith' into [data-test='lastName']
+[2026-05-21 17:02:07.825] [STEP ] [main] >> Typing '54321' into [data-test='postalCode']
+[2026-05-21 17:02:07.841] [STEP ] [main] >> Clicking: [data-test='continue']
+[2026-05-21 17:02:07.904] [INFO ] [main] [PASSED] testSubtotalMultipleItems
+[2026-05-21 17:02:07.906] [INFO ] [main] TEST END: testSubtotalMultipleItems => PASSED
+[2026-05-21 17:02:07.906] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:02:07.913] [DEBUG] [main] Browser context closed
+[2026-05-21 17:02:07.915] [INFO ] [main] ========================================
+[2026-05-21 17:02:07.916] [INFO ] [main] TEST START: testTaxCalculation
+[2026-05-21 17:02:07.916] [INFO ] [main] ========================================
+[2026-05-21 17:02:08.014] [INFO ] [main] New browser context and page created
+[2026-05-21 17:02:08.015] [STEP ] [main] >> Navigating to: https://www.saucedemo.com
+[2026-05-21 17:02:08.615] [INFO ] [main] Login page loaded
+[2026-05-21 17:02:08.616] [INFO ] [main] Logging in as: standard_user
+[2026-05-21 17:02:08.616] [STEP ] [main] >> Typing 'standard_user' into #user-name
+[2026-05-21 17:02:08.652] [STEP ] [main] >> Typing [MASKED] into #password
+[2026-05-21 17:02:08.666] [STEP ] [main] >> Clicking: #login-button
+[2026-05-21 17:02:08.745] [STEP ] [main] >> Adding to cart: sauce-labs-backpack
+[2026-05-21 17:02:08.745] [STEP ] [main] >> Clicking: [data-test='add-to-cart-sauce-labs-backpack']
+[2026-05-21 17:02:08.792] [STEP ] [main] >> Navigating to cart
+[2026-05-21 17:02:08.792] [STEP ] [main] >> Clicking: .shopping_cart_link
+[2026-05-21 17:02:08.839] [STEP ] [main] >> Proceeding to checkout
+[2026-05-21 17:02:08.839] [STEP ] [main] >> Clicking: [data-test='checkout']
+[2026-05-21 17:02:08.886] [STEP ] [main] >> Typing 'John' into [data-test='firstName']
+[2026-05-21 17:02:08.907] [STEP ] [main] >> Typing 'Doe' into [data-test='lastName']
+[2026-05-21 17:02:08.926] [STEP ] [main] >> Typing '12345' into [data-test='postalCode']
+[2026-05-21 17:02:08.942] [STEP ] [main] >> Clicking: [data-test='continue']
+[2026-05-21 17:02:09.038] [INFO ] [main] [PASSED] testTaxCalculation
+[2026-05-21 17:02:09.038] [INFO ] [main] TEST END: testTaxCalculation => PASSED
+[2026-05-21 17:02:09.039] [INFO ] [main] ----------------------------------------
+[2026-05-21 17:02:09.043] [DEBUG] [main] Browser context closed
+[2026-05-21 17:02:09.115] [INFO ] [main] Browser closed
+[2026-05-21 17:02:09.115] [INFO ] [main] 
+[2026-05-21 17:02:09.115] [INFO ] [main] ==========================================
+[2026-05-21 17:02:09.116] [INFO ] [main]          FINAL TEST RESULTS               
+[2026-05-21 17:02:09.116] [INFO ] [main] ==========================================
+[2026-05-21 17:02:09.116] [INFO ] [main]   Passed  : 37
+[2026-05-21 17:02:09.116] [INFO ] [main]   Failed  : 9
+[2026-05-21 17:02:09.116] [INFO ] [main]   Skipped : 0
+[2026-05-21 17:02:09.116] [INFO ] [main]   Total   : 46
+[2026-05-21 17:02:09.116] [INFO ] [main]   Pass Rate: 80.4%
+[2026-05-21 17:02:09.117] [INFO ] [main] ==========================================
+[2026-05-21 17:02:09.135] [INFO ] [main] Playwright instance closed
+[2026-05-21 17:02:09.135] [INFO ] [main] ################################################
+[2026-05-21 17:02:09.135] [INFO ] [main] SUITE COMPLETED
+[2026-05-21 17:02:09.136] [INFO ] [main] ################################################

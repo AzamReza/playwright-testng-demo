@@ -56,6 +56,12 @@ public class TestDataProviders {
         };
     }
 
+    // Alias used by CheckoutTest
+    @DataProvider(name = "checkoutValidData")
+    public static Object[][] checkoutValidData() {
+        return checkoutData();
+    }
+
     @DataProvider(name = "invalidCheckoutData")
     public static Object[][] invalidCheckoutData() {
         return new Object[][] {
@@ -64,6 +70,12 @@ public class TestDataProviders {
                 { "John",  "",      "10001", "Error: Last Name is required" },
                 { "John",  "Doe",   "",      "Error: Postal Code is required" }
         };
+    }
+
+    // Alias used by CheckoutTest
+    @DataProvider(name = "checkoutInvalidData")
+    public static Object[][] checkoutInvalidData() {
+        return invalidCheckoutData();
     }
 
     @DataProvider(name = "productSlugs")

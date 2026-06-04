@@ -2,6 +2,7 @@ package com.bjit.ecauto.tests;
 
 import com.bjit.ecauto.base.BaseTest;
 import com.bjit.ecauto.pages.CartPage;
+import com.bjit.ecauto.pages.LoginPage;
 import com.bjit.ecauto.pages.ProductsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -26,7 +27,8 @@ public class CartTest extends BaseTest {
     }
 
     private ProductsPage loginAsStandardUser() {
-        return null;
+        LoginPage loginPage = new LoginPage(page);
+        return loginPage.loginAsStandardUser();
     }
 
     // ============================

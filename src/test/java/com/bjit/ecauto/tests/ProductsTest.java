@@ -1,10 +1,13 @@
 package com.bjit.ecauto.tests;
 
-import com.bjit.ecauto.base.BaseTest;
+import com.bjit.ecauto.base.AbstractProductsTest;
 import com.bjit.ecauto.dataproviders.TestDataProviders;
-import com.bjit.ecauto.pages.LoginPage;
 import com.bjit.ecauto.pages.ProductsPage;
 import com.bjit.ecauto.utils.ConfigReader;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,30 +17,32 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ProductsTest extends BaseTest {
+@Feature("Products Page")
+public class ProductsTest extends AbstractProductsTest {
 
     private ProductsPage productsPage;
 
     @BeforeMethod(dependsOnMethods = "createContext")
     public void loginAndNavigate() {
-        LoginPage loginPage = new LoginPage(page);
-        productsPage = loginPage.navigate()
-                .loginAs(ConfigReader.getStandardUsername(),
-                        ConfigReader.getStandardPassword());
+        productsPage = loginAndGetProductsPage();
     }
 
     // ============================
     // PAGE VERIFICATION
     // ============================
+    @Override
+    @Story("Page Load Verification")
+    @Severity(SeverityLevel.BLOCKER)
     @Test(priority = 1,
             description = "Verify products page loads with correct title")
-    public void testProductsPageLoads() {
+    public void testProductsPageLoaded() {
         Assert.assertTrue(productsPage.isOnProductsPage(),
                 "Should be on Products page");
         Assert.assertEquals(productsPage.getPageTitle(), "Products",
                 "Page title should be 'Products'");
     }
 
+    @Override
     @Test(priority = 2,
             description = "Verify all 6 products are displayed")
     public void testProductCount() {
@@ -46,6 +51,7 @@ public class ProductsTest extends BaseTest {
                 "Should display exactly 6 products");
     }
 
+    @Override
     @Test(priority = 3,
             description = "Verify all product names are displayed")
     public void testProductNamesDisplayed() {
@@ -62,6 +68,7 @@ public class ProductsTest extends BaseTest {
         soft.assertAll();
     }
 
+    @Override
     @Test(priority = 4,
             description = "Verify all product prices are displayed and valid")
     public void testProductPricesValid() {
@@ -78,6 +85,9 @@ public class ProductsTest extends BaseTest {
     // ============================
     // SORTING TESTS
     // ============================
+    @Override
+    @Story("Product Sorting - A to Z")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 5,
             description = "Verify products sort by Name A to Z")
     public void testSortByNameAZ() {
@@ -91,6 +101,7 @@ public class ProductsTest extends BaseTest {
                 "Products should be sorted alphabetically A-Z");
     }
 
+    @Override
     @Test(priority = 6,
             description = "Verify products sort by Name Z to A")
     public void testSortByNameZA() {
@@ -104,6 +115,7 @@ public class ProductsTest extends BaseTest {
                 "Products should be sorted reverse alphabetically Z-A");
     }
 
+    @Override
     @Test(priority = 7,
             description = "Verify products sort by Price Low to High")
     public void testSortByPriceLowToHigh() {
@@ -117,6 +129,7 @@ public class ProductsTest extends BaseTest {
                 "Prices should be sorted low to high");
     }
 
+    @Override
     @Test(priority = 8,
             description = "Verify products sort by Price High to Low")
     public void testSortByPriceHighToLow() {
@@ -133,6 +146,7 @@ public class ProductsTest extends BaseTest {
     // ============================
     // ADD TO CART TESTS
     // ============================
+    @Override
     @Test(priority = 9,
             description = "Verify adding single item to cart updates badge")
     public void testAddSingleItemToCart() {
@@ -145,6 +159,7 @@ public class ProductsTest extends BaseTest {
                 "Cart badge should show 1 after adding one item");
     }
 
+    @Override
     @Test(priority = 10,
             description = "Verify adding multiple items to cart")
     public void testAddMultipleItemsToCart() {
@@ -156,6 +171,7 @@ public class ProductsTest extends BaseTest {
                 "Cart badge should show 3 after adding three items");
     }
 
+    @Override
     @Test(priority = 11,
             description = "Verify adding all 6 items to cart")
     public void testAddAllItemsToCart() {
@@ -173,6 +189,7 @@ public class ProductsTest extends BaseTest {
     // ============================
     // REMOVE FROM CART TESTS
     // ============================
+    @Override
     @Test(priority = 12,
             description = "Verify removing item from cart on products page")
     public void testRemoveItemFromProductsPage() {
@@ -185,6 +202,7 @@ public class ProductsTest extends BaseTest {
                 "Cart should be empty after removing");
     }
 
+    @Override
     @Test(priority = 13,
             description = "Verify add and remove multiple items")
     public void testAddAndRemoveMultiple() {

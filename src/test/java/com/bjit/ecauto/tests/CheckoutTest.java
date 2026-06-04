@@ -1,67 +1,29 @@
 package com.bjit.ecauto.tests;
 
-import com.bjit.ecauto.base.BaseTest;
+import com.bjit.ecauto.base.AbstractCheckoutTest;
 import com.bjit.ecauto.dataproviders.TestDataProviders;
 import com.bjit.ecauto.pages.CartPage;
 import com.bjit.ecauto.pages.CheckoutPage;
-import com.bjit.ecauto.pages.LoginPage; // Fixed: Added missing import
-import com.bjit.ecauto.pages.ProductsPage;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
-public class CheckoutTest extends BaseTest {
-
-    // ============================
-    // HELPERS — Navigate to each checkout step
-    // ============================
-    private CheckoutPage goToCheckoutStepOne() {
-        LoginPage loginPage = new LoginPage(page);
-        ProductsPage productsPage = loginPage.loginAsStandardUser();
-        productsPage.addBackpackToCart();
-
-        CartPage cartPage = productsPage.goToCart();
-        CheckoutPage checkoutPage = cartPage.proceedToCheckout();
-        return checkoutPage;
-    }
-
-    private CheckoutPage goToCheckoutStepOneWithMultipleItems() {
-        LoginPage loginPage = new LoginPage(page); // Fixed: Added LoginPage instantiation
-        ProductsPage productsPage = loginPage.loginAsStandardUser();
-        productsPage.addBackpackToCart();
-        productsPage.addBikeLightToCart();
-        productsPage.addOnesieToCart();
-
-        CartPage cartPage = productsPage.goToCart();
-        CheckoutPage checkoutPage = cartPage.proceedToCheckout();
-        return checkoutPage;
-    }
-
-    private CheckoutPage goToCheckoutStepTwo() {
-        // Fixed: Replaced duplicate code with direct progression to step two
-        CheckoutPage checkoutPage = goToCheckoutStepOne();
-        checkoutPage.enterFirstName("John");
-        checkoutPage.enterLastName("Doe");
-        checkoutPage.enterPostalCode("12345");
-        checkoutPage.clickContinue();
-        return checkoutPage;
-    }
-
-    private CheckoutPage goToCheckoutStepTwoWithMultipleItems() {
-        CheckoutPage checkoutPage = goToCheckoutStepOneWithMultipleItems();
-        checkoutPage.enterFirstName("Jane");
-        checkoutPage.enterLastName("Smith");
-        checkoutPage.enterPostalCode("54321");
-        checkoutPage.clickContinue();
-        return checkoutPage;
-    }
+@Feature("Checkout Process")
+public class CheckoutTest extends AbstractCheckoutTest {
 
     // ========================================================
     // STEP ONE — CUSTOMER INFORMATION TESTS
     // ========================================================
 
+    @Override
+    @Story("Checkout Step One - Information")
+    @Severity(SeverityLevel.BLOCKER)
     @Test(priority = 1,
             description = "Verify checkout step one page loads correctly")
     public void testCheckoutStepOneLoads() {
@@ -73,6 +35,7 @@ public class CheckoutTest extends BaseTest {
                 "Title should contain 'Your Information'");
     }
 
+    @Override
     @Test(priority = 2,
             dataProvider = "checkoutValidData",
             dataProviderClass = TestDataProviders.class,
@@ -90,6 +53,7 @@ public class CheckoutTest extends BaseTest {
                         + firstName + " " + lastName);
     }
 
+    @Override
     @Test(priority = 3,
             dataProvider = "checkoutInvalidData",
             dataProviderClass = TestDataProviders.class,
@@ -109,6 +73,7 @@ public class CheckoutTest extends BaseTest {
                 "Error message should match expected");
     }
 
+    @Override
     @Test(priority = 4,
             description = "Verify all empty fields shows first name required error")
     public void testAllFieldsEmpty() {
@@ -123,6 +88,7 @@ public class CheckoutTest extends BaseTest {
                 "Should show first name required error");
     }
 
+    @Override
     @Test(priority = 5,
             description = "Verify cancel on step one returns to cart")
     public void testCancelOnStepOne() {
@@ -140,6 +106,7 @@ public class CheckoutTest extends BaseTest {
     // STEP TWO — ORDER OVERVIEW TESTS
     // ========================================================
 
+    @Override
     @Test(priority = 6,
             description = "Verify checkout overview shows correct single item")
     public void testOverviewShowsSingleItem() {
@@ -162,6 +129,7 @@ public class CheckoutTest extends BaseTest {
         soft.assertAll();
     }
 
+    @Override
     @Test(priority = 7,
             description = "Verify checkout overview shows correct multiple items")
     public void testOverviewShowsMultipleItems() {
@@ -179,6 +147,7 @@ public class CheckoutTest extends BaseTest {
         soft.assertAll();
     }
 
+    @Override
     @Test(priority = 8,
             description = "Verify subtotal calculation is correct for single item")
     public void testSubtotalSingleItem() {
@@ -189,6 +158,7 @@ public class CheckoutTest extends BaseTest {
                 "Subtotal should be $29.99 for Backpack");
     }
 
+    @Override
     @Test(priority = 9,
             description = "Verify subtotal calculation is correct for multiple items")
     public void testSubtotalMultipleItems() {
@@ -202,6 +172,7 @@ public class CheckoutTest extends BaseTest {
                 "Subtotal should equal sum of item prices");
     }
 
+    @Override
     @Test(priority = 10,
             description = "Verify tax is calculated correctly")
     public void testTaxCalculation() {

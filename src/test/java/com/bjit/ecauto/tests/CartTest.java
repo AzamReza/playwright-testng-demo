@@ -1,20 +1,27 @@
 package com.bjit.ecauto.tests;
 
-import com.bjit.ecauto.base.BaseTest;
+import com.bjit.ecauto.base.AbstractCartTest;
 import com.bjit.ecauto.pages.CartPage;
-import com.bjit.ecauto.pages.LoginPage;
 import com.bjit.ecauto.pages.ProductsPage;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
-public class CartTest extends BaseTest {
+@Feature("Shopping Cart")
+public class CartTest extends AbstractCartTest {
 
     // ============================
     // CART PAGE NAVIGATION
     // ============================
+    @Override
+    @Story("Cart Navigation")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 1,
             description = "Verify cart page loads correctly with empty cart")
     public void testEmptyCartPage() {
@@ -26,14 +33,10 @@ public class CartTest extends BaseTest {
         Assert.assertEquals(cartPage.getCartItemCount(), 0, "Item count should be 0");
     }
 
-    private ProductsPage loginAsStandardUser() {
-        LoginPage loginPage = new LoginPage(page);
-        return loginPage.loginAsStandardUser();
-    }
-
     // ============================
     // CART ITEMS VERIFICATION
     // ============================
+    @Override
     @Test(priority = 2,
             description = "Verify single item appears in cart with correct details")
     public void testSingleItemInCart() {
@@ -55,6 +58,7 @@ public class CartTest extends BaseTest {
         soft.assertAll();
     }
 
+    @Override
     @Test(priority = 3,
             description = "Verify multiple items appear in cart")
     public void testMultipleItemsInCart() {
@@ -76,6 +80,7 @@ public class CartTest extends BaseTest {
     // ============================
     // REMOVE FROM CART
     // ============================
+    @Override
     @Test(priority = 4,
             description = "Verify item can be removed from cart page")
     public void testRemoveItemFromCart() {
@@ -94,6 +99,7 @@ public class CartTest extends BaseTest {
                 "Bike Light should still be in cart");
     }
 
+    @Override
     @Test(priority = 5,
             description = "Verify removing all items results in empty cart")
     public void testRemoveAllItemsFromCart() {
@@ -112,6 +118,7 @@ public class CartTest extends BaseTest {
     // ============================
     // CONTINUE SHOPPING
     // ============================
+    @Override
     @Test(priority = 6,
             description = "Verify Continue Shopping returns to products page")
     public void testContinueShopping() {
@@ -130,6 +137,7 @@ public class CartTest extends BaseTest {
     // ============================
     // PROCEED TO CHECKOUT
     // ============================
+    @Override
     @Test(priority = 7,
             description = "Verify cart proceeds to checkout step one")
     public void testProceedToCheckout() {

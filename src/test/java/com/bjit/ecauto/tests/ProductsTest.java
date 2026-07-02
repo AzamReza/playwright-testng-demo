@@ -4,6 +4,7 @@ import com.bjit.ecauto.base.AbstractProductsTest;
 import com.bjit.ecauto.dataproviders.TestDataProviders;
 import com.bjit.ecauto.pages.ProductsPage;
 import com.bjit.ecauto.utils.ConfigReader;
+import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -88,6 +89,9 @@ public class ProductsTest extends AbstractProductsTest {
     @Override
     @Story("Product Sorting - A to Z")
     @Severity(SeverityLevel.CRITICAL)
+    @Description("Preconditions: User logged in, Products page loaded\n" +
+            "Steps: Select 'Name (A to Z)' from sort dropdown, retrieve sorted product names\n" +
+            "Expected: Products sorted alphabetically A to Z")
     @Test(priority = 5,
             description = "Verify products sort by Name A to Z")
     public void testSortByNameAZ() {
@@ -147,6 +151,9 @@ public class ProductsTest extends AbstractProductsTest {
     // ADD TO CART TESTS
     // ============================
     @Override
+    @Description("Preconditions: User logged in, Products page loaded, cart empty\n" +
+            "Steps: Click 'Add to Cart' for Backpack, verify cart badge updates\n" +
+            "Expected: Cart badge shows 1 item")
     @Test(priority = 9,
             description = "Verify adding single item to cart updates badge")
     public void testAddSingleItemToCart() {

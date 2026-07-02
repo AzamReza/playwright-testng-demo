@@ -24,6 +24,7 @@
         <surefire.version>3.5.1</surefire.version>
         <compiler.version>3.13.0</compiler.version>
         <allure.version>2.25.0</allure.version>
+        <axe.playwright.version>4.10.2</axe.playwright.version>
     </properties>
 
     <dependencies>
@@ -48,6 +49,20 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>${allure.version}</version>
+        </dependency>
+
+        <!-- Axe-core integration for Playwright accessibility scans -->
+        <dependency>
+            <groupId>com.deque.html.axe-core</groupId>
+            <artifactId>playwright</artifactId>
+            <version>${axe.playwright.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.microsoft.playwright</groupId>
+                    <artifactId>playwright</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
     </dependencies>

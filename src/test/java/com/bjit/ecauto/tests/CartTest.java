@@ -3,6 +3,7 @@ package com.bjit.ecauto.tests;
 import com.bjit.ecauto.base.AbstractCartTest;
 import com.bjit.ecauto.pages.CartPage;
 import com.bjit.ecauto.pages.ProductsPage;
+import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -22,6 +23,9 @@ public class CartTest extends AbstractCartTest {
     @Override
     @Story("Cart Navigation")
     @Severity(SeverityLevel.CRITICAL)
+    @Description("Preconditions: User logged in, Products page displayed, cart empty\n" +
+            "Steps: Click cart icon, navigate to cart page\n" +
+            "Expected: Cart page displays with empty cart state, item count = 0")
     @Test(priority = 1,
             description = "Verify cart page loads correctly with empty cart")
     public void testEmptyCartPage() {

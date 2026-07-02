@@ -1,4 +1,61 @@
+
+3. Essential Git Commands Workflow
+# 1. Turn an ordinary local folder into a fresh Git Repository
 git init
-git add .    
-git commit -m "3rd commit"     
-git push -u origin main     
+
+# 2. Check the status of your files (shows modified, untracked, or staged changes)
+git status
+
+# 3. Add a specific file to the Staging Area
+git add filename.java
+
+# 4. Add ALL modified and untracked files to the Staging Area at once
+git add .
+
+# 5. Save the staged snapshot permanently to the Local Repository with a descriptive message
+git commit -m "feat: Add core payment gateway API logic"
+
+# 6. View the chronological history of all past commits made in this project
+git log --oneline
+
+4. Branching & Merging
+# Create a brand new branch named "feature-login"
+git branch feature-login
+
+# Switch your active working directory focus to the new branch
+git switch feature-login
+# (Alternative older syntax: git checkout feature-login)
+
+# Combined shortcut: Create a new branch AND switch to it instantly
+git switch -c feature-api-tests
+
+# --- To Merge Changes Back ---
+# 1. Switch back to your stable target branch
+git switch main
+
+# 2. Pull the changes from the feature branch into the main branch
+git merge feature-api-tests
+
+
+5. Interacting with GitHub: Push & Pull
+# Link your local repo to a blank remote repository created on GitHub
+git remote add origin https://github.com
+
+# Rename your primary default local branch to 'main' (modern standard)
+git branch -M main
+
+# PUSH: Upload your local 'main' branch commits to the remote GitHub repository
+git push -u origin main
+
+# PULL: Download and merge the latest remote commits from GitHub into your local directory
+git pull origin main
+
+
+
+Essential Maven Commands
+mvn clean 
+mvn compile
+mvn test
+
+mvn test -Dtest=ClassName
+mvn allure:serve 

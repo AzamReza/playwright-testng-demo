@@ -1,0 +1,902 @@
+{
+  "testSuites": [
+    {
+      "id": "TS001",
+      "name": "Authentication Tests",
+      "feature": "Authentication",
+      "description": "Test suite covering login, logout, and user authentication scenarios",
+      "totalTestCases": 6,
+      "testCases": [
+        {
+          "id": "TC_AUTH_001",
+          "testName": "testValidLogin",
+          "description": "Verify standard user can login successfully",
+          "severity": "BLOCKER",
+          "story": "Valid Login",
+          "preconditions": [
+            "Application is loaded at https://www.saucedemo.com",
+            "Login page is displayed",
+            "Valid standard user credentials are available (standard_user / secret_sauce)"
+          ],
+          "steps": [
+            "1. Navigate to login page",
+            "2. Enter username: 'standard_user'",
+            "3. Enter password: 'secret_sauce'",
+            "4. Click the Login button"
+          ],
+          "expectedResult": [
+            "User should be successfully logged in",
+            "Products page should be displayed",
+            "Page title should be 'Products'",
+            "User should see the list of available products"
+          ],
+          "priority": 1,
+          "status": "Active",
+          "keywords": ["login", "positive", "valid-credentials"]
+        },
+        {
+          "id": "TC_AUTH_002",
+          "testName": "testAllUserTypes",
+          "description": "Verify login behavior for all user types (standard, locked out, problem, performance glitch)",
+          "severity": "CRITICAL",
+          "story": "Login with Multiple User Types",
+          "preconditions": [
+            "Application is loaded",
+            "Login page is displayed",
+            "Test data for various user types is available"
+          ],
+          "steps": [
+            "1. For each user type from data provider:",
+            "   a. Navigate to login page",
+            "   b. Enter username and password",
+            "   c. Click Login button",
+            "   d. Verify the result based on shouldPass flag"
+          ],
+          "expectedResult": [
+            "For valid users: should navigate to Products page",
+            "For locked out users: should display error message",
+            "Error messages should be appropriate for each user type"
+          ],
+          "priority": 2,
+          "status": "Active",
+          "keywords": ["login", "data-driven", "multi-user"]
+        },
+        {
+          "id": "TC_AUTH_003",
+          "testName": "testInvalidLogin",
+          "description": "Verify error messages for invalid login attempts",
+          "severity": "CRITICAL",
+          "story": "Invalid Login Validation",
+          "preconditions": [
+            "Application is loaded",
+            "Login page is displayed",
+            "Test data with invalid credentials is available"
+          ],
+          "steps": [
+            "1. For each invalid login data set:",
+            "   a. Enter invalid username",
+            "   b. Enter invalid password",
+            "   c. Click Login button",
+            "   d. Verify error message appears"
+          ],
+          "expectedResult": [
+            "Error message should be displayed",
+            "Error message should contain expected error text",
+            "User should remain on login page"
+          ],
+          "priority": 3,
+          "status": "Active",
+          "keywords": ["login", "negative", "invalid-credentials", "error-handling"]
+        },
+        {
+          "id": "TC_AUTH_004",
+          "testName": "testLockedOutUser",
+          "description": "Verify locked out user cannot login",
+          "severity": "CRITICAL",
+          "story": "Locked User Prevention",
+          "preconditions": [
+            "Application is loaded",
+            "Login page is displayed",
+            "Locked out user credentials are available (locked_out_user / secret_sauce)"
+          ],
+          "steps": [
+            "1. Navigate to login page",
+            "2. Enter username: 'locked_out_user'",
+            "3. Enter password: 'secret_sauce'",
+            "4. Click Login button"
+          ],
+          "expectedResult": [
+            "Error message should be displayed",
+            "Error message should mention 'locked out'",
+            "User should remain on login page"
+          ],
+          "priority": 4,
+          "status": "Active",
+          "keywords": ["login", "security", "locked-user"]
+        },
+        {
+          "id": "TC_AUTH_005",
+          "testName": "testCloseErrorMessage",
+          "description": "Verify error can be closed after failed login",
+          "severity": "CRITICAL",
+          "story": "Error Message Handling",
+          "preconditions": [
+            "Application is loaded",
+            "Login page is displayed",
+            "An error message is displayed from a failed login attempt"
+          ],
+          "steps": [
+            "1. Attempt to login with empty credentials",
+            "2. Verify error message is visible",
+            "3. Click the error close button (X)"
+          ],
+          "expectedResult": [
+            "Error message should disappear",
+            "User should be able to re-enter credentials",
+            "Login form should be ready for new input"
+          ],
+          "priority": 5,
+          "status": "Active",
+          "keywords": ["login", "error-handling", "ui"]
+        },
+        {
+          "id": "TC_AUTH_006",
+          "testName": "testLogout",
+          "description": "Verify user can logout successfully",
+          "severity": "CRITICAL",
+          "story": "Session Management",
+          "preconditions": [
+            "User is logged in successfully",
+            "Products page is displayed",
+            "Logout menu/button is available"
+          ],
+          "steps": [
+            "1. Login with valid credentials (standard_user / secret_sauce)",
+            "2. Verify user is on Products page",
+            "3. Click on the hamburger menu",
+            "4. Click 'Logout' option"
+          ],
+          "expectedResult": [
+            "User should be logged out",
+            "User should be redirected to login page",
+            "Session should be cleared"
+          ],
+          "priority": 6,
+          "status": "Active",
+          "keywords": ["logout", "session", "security"]
+        }
+      ]
+    },
+    {
+      "id": "TS002",
+      "name": "Products Page Tests",
+      "feature": "Products Page",
+      "description": "Test suite covering product display, filtering, sorting, and shopping cart operations",
+      "totalTestCases": 13,
+      "testCases": [
+        {
+          "id": "TC_PROD_001",
+          "testName": "testProductsPageLoaded",
+          "description": "Verify products page loads with correct title",
+          "severity": "BLOCKER",
+          "story": "Page Load Verification",
+          "preconditions": [
+            "User is logged in with valid credentials",
+            "Products page is accessible"
+          ],
+          "steps": [
+            "1. Login successfully",
+            "2. Verify page loads",
+            "3. Check page title"
+          ],
+          "expectedResult": [
+            "Products page should load",
+            "Page title should be 'Products'"
+          ],
+          "priority": 1,
+          "status": "Active",
+          "keywords": ["products", "page-load"]
+        },
+        {
+          "id": "TC_PROD_002",
+          "testName": "testProductCount",
+          "description": "Verify all 6 products are displayed",
+          "severity": "HIGH",
+          "story": "Page Load Verification",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Count the total number of products displayed",
+            "2. Verify the count"
+          ],
+          "expectedResult": [
+            "Exactly 6 products should be displayed"
+          ],
+          "priority": 2,
+          "status": "Active",
+          "keywords": ["products", "verification"]
+        },
+        {
+          "id": "TC_PROD_003",
+          "testName": "testProductNamesDisplayed",
+          "description": "Verify all product names are displayed",
+          "severity": "HIGH",
+          "story": "Page Load Verification",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Get all product names from the page",
+            "2. Verify each product name is present"
+          ],
+          "expectedResult": [
+            "All 6 products should have their names displayed:",
+            "- Sauce Labs Backpack",
+            "- Sauce Labs Bike Light",
+            "- Sauce Labs Bolt T-Shirt",
+            "- Sauce Labs Fleece Jacket",
+            "- Sauce Labs Onesie",
+            "- Test.allTheThings() T-Shirt (Red)"
+          ],
+          "priority": 3,
+          "status": "Active",
+          "keywords": ["products", "names", "verification"]
+        },
+        {
+          "id": "TC_PROD_004",
+          "testName": "testProductPricesValid",
+          "description": "Verify all product prices are displayed and valid",
+          "severity": "HIGH",
+          "story": "Page Load Verification",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Get all product prices",
+            "2. Verify each price is a positive number",
+            "3. Verify count matches product count"
+          ],
+          "expectedResult": [
+            "All 6 products should have prices displayed",
+            "All prices should be greater than 0"
+          ],
+          "priority": 4,
+          "status": "Active",
+          "keywords": ["products", "prices", "validation"]
+        },
+        {
+          "id": "TC_PROD_005",
+          "testName": "testSortByNameAZ",
+          "description": "Verify products sort by Name A to Z",
+          "severity": "CRITICAL",
+          "story": "Product Sorting - A to Z",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Click the sort dropdown",
+            "2. Select 'Name (A to Z)' option",
+            "3. Get the sorted product names"
+          ],
+          "expectedResult": [
+            "Products should be sorted alphabetically A to Z",
+            "Each product should appear in correct order"
+          ],
+          "priority": 5,
+          "status": "Active",
+          "keywords": ["sorting", "a-to-z", "products"]
+        },
+        {
+          "id": "TC_PROD_006",
+          "testName": "testSortByNameZA",
+          "description": "Verify products sort by Name Z to A",
+          "severity": "CRITICAL",
+          "story": "Product Sorting - Z to A",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Click the sort dropdown",
+            "2. Select 'Name (Z to A)' option",
+            "3. Get the sorted product names"
+          ],
+          "expectedResult": [
+            "Products should be sorted reverse alphabetically Z to A"
+          ],
+          "priority": 6,
+          "status": "Active",
+          "keywords": ["sorting", "z-to-a", "products"]
+        },
+        {
+          "id": "TC_PROD_007",
+          "testName": "testSortByPriceLowToHigh",
+          "description": "Verify products sort by Price Low to High",
+          "severity": "CRITICAL",
+          "story": "Product Sorting - Low to High",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Click the sort dropdown",
+            "2. Select 'Price (low to high)' option",
+            "3. Get the sorted prices"
+          ],
+          "expectedResult": [
+            "Products should be sorted by price in ascending order",
+            "Lowest priced product should appear first"
+          ],
+          "priority": 7,
+          "status": "Active",
+          "keywords": ["sorting", "price", "low-to-high"]
+        },
+        {
+          "id": "TC_PROD_008",
+          "testName": "testSortByPriceHighToLow",
+          "description": "Verify products sort by Price High to Low",
+          "severity": "CRITICAL",
+          "story": "Product Sorting - High to Low",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Click the sort dropdown",
+            "2. Select 'Price (high to low)' option",
+            "3. Get the sorted prices"
+          ],
+          "expectedResult": [
+            "Products should be sorted by price in descending order",
+            "Highest priced product should appear first"
+          ],
+          "priority": 8,
+          "status": "Active",
+          "keywords": ["sorting", "price", "high-to-low"]
+        },
+        {
+          "id": "TC_PROD_009",
+          "testName": "testAddSingleItemToCart",
+          "description": "Verify adding single item to cart updates badge",
+          "severity": "BLOCKER",
+          "story": "Add to Cart",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded",
+            "Cart is empty (showing 0 or no badge)"
+          ],
+          "steps": [
+            "1. Verify cart is empty",
+            "2. Click 'Add to Cart' button for Backpack",
+            "3. Verify cart badge updates"
+          ],
+          "expectedResult": [
+            "Cart badge should show '1'",
+            "Only one item should be in cart"
+          ],
+          "priority": 9,
+          "status": "Active",
+          "keywords": ["shopping-cart", "add-to-cart"]
+        },
+        {
+          "id": "TC_PROD_010",
+          "testName": "testAddMultipleItemsToCart",
+          "description": "Verify adding multiple items to cart",
+          "severity": "BLOCKER",
+          "story": "Add to Cart",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Click 'Add to Cart' for Backpack",
+            "2. Click 'Add to Cart' for Bike Light",
+            "3. Click 'Add to Cart' for Bolt T-Shirt",
+            "4. Verify cart badge"
+          ],
+          "expectedResult": [
+            "Cart badge should show '3'",
+            "All three items should be in cart"
+          ],
+          "priority": 10,
+          "status": "Active",
+          "keywords": ["shopping-cart", "add-to-cart", "multiple"]
+        },
+        {
+          "id": "TC_PROD_011",
+          "testName": "testAddAllItemsToCart",
+          "description": "Verify adding all 6 items to cart",
+          "severity": "BLOCKER",
+          "story": "Add to Cart",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Add all 6 products to cart",
+            "2. Verify cart badge"
+          ],
+          "expectedResult": [
+            "Cart badge should show '6'",
+            "All 6 items should be in cart"
+          ],
+          "priority": 11,
+          "status": "Active",
+          "keywords": ["shopping-cart", "add-to-cart", "all-items"]
+        },
+        {
+          "id": "TC_PROD_012",
+          "testName": "testRemoveItemFromProductsPage",
+          "description": "Verify removing item from cart on products page",
+          "severity": "HIGH",
+          "story": "Remove from Cart",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded",
+            "Backpack is added to cart"
+          ],
+          "steps": [
+            "1. Add Backpack to cart",
+            "2. Verify cart shows 1 item",
+            "3. Click 'Remove' button for Backpack",
+            "4. Verify cart badge updates"
+          ],
+          "expectedResult": [
+            "Cart should show 0 items",
+            "Backpack should be removed from cart",
+            "Remove button should change back to 'Add to Cart'"
+          ],
+          "priority": 12,
+          "status": "Active",
+          "keywords": ["shopping-cart", "remove"]
+        },
+        {
+          "id": "TC_PROD_013",
+          "testName": "testAddAndRemoveMultiple",
+          "description": "Verify add and remove multiple items",
+          "severity": "HIGH",
+          "story": "Cart Operations",
+          "preconditions": [
+            "User is logged in",
+            "Products page is loaded"
+          ],
+          "steps": [
+            "1. Add Backpack to cart",
+            "2. Add Bike Light to cart",
+            "3. Verify cart shows 2 items",
+            "4. Remove Backpack from cart",
+            "5. Verify cart shows 1 item"
+          ],
+          "expectedResult": [
+            "Cart should show correct count after each operation",
+            "Only Bike Light should remain in cart",
+            "Backpack button should show 'Add to Cart'"
+          ],
+          "priority": 13,
+          "status": "Active",
+          "keywords": ["shopping-cart", "add-remove"]
+        }
+      ]
+    },
+    {
+      "id": "TS003",
+      "name": "Shopping Cart Tests",
+      "feature": "Shopping Cart",
+      "description": "Test suite covering cart page operations, item management, and checkout flow",
+      "totalTestCases": 7,
+      "testCases": [
+        {
+          "id": "TC_CART_001",
+          "testName": "testEmptyCartPage",
+          "description": "Verify cart page loads correctly with empty cart",
+          "severity": "CRITICAL",
+          "story": "Cart Navigation",
+          "preconditions": [
+            "User is logged in",
+            "Products page is displayed",
+            "Cart is empty"
+          ],
+          "steps": [
+            "1. Click on cart icon",
+            "2. Verify cart page loads",
+            "3. Verify cart is empty"
+          ],
+          "expectedResult": [
+            "Should be on Cart page",
+            "Cart should show as empty",
+            "Item count should be 0"
+          ],
+          "priority": 1,
+          "status": "Active",
+          "keywords": ["cart", "navigation", "empty"]
+        },
+        {
+          "id": "TC_CART_002",
+          "testName": "testSingleItemInCart",
+          "description": "Verify single item appears in cart with correct details",
+          "severity": "HIGH",
+          "story": "Cart Items",
+          "preconditions": [
+            "User is logged in",
+            "Products page is displayed"
+          ],
+          "steps": [
+            "1. Add Backpack to cart",
+            "2. Navigate to cart",
+            "3. Verify item details"
+          ],
+          "expectedResult": [
+            "Cart should contain 1 item",
+            "Item should be 'Sauce Labs Backpack'",
+            "Price should be '$29.99'",
+            "Quantity should be displayed"
+          ],
+          "priority": 2,
+          "status": "Active",
+          "keywords": ["cart", "items", "verification"]
+        },
+        {
+          "id": "TC_CART_003",
+          "testName": "testMultipleItemsInCart",
+          "description": "Verify multiple items appear in cart",
+          "severity": "HIGH",
+          "story": "Cart Items",
+          "preconditions": [
+            "User is logged in",
+            "Products page is displayed"
+          ],
+          "steps": [
+            "1. Add three items to cart",
+            "2. Navigate to cart",
+            "3. Verify all items are present"
+          ],
+          "expectedResult": [
+            "Cart should show 3 items",
+            "All item names should be correct",
+            "All prices should be displayed"
+          ],
+          "priority": 3,
+          "status": "Active",
+          "keywords": ["cart", "items", "multiple"]
+        },
+        {
+          "id": "TC_CART_004",
+          "testName": "testRemoveItemFromCart",
+          "description": "Verify item can be removed from cart page",
+          "severity": "HIGH",
+          "story": "Cart Management",
+          "preconditions": [
+            "User is logged in",
+            "Cart contains 2 items"
+          ],
+          "steps": [
+            "1. Navigate to cart",
+            "2. Click remove button for Backpack",
+            "3. Verify cart updates"
+          ],
+          "expectedResult": [
+            "Cart should show 1 item",
+            "Backpack should be removed",
+            "Bike Light should remain"
+          ],
+          "priority": 4,
+          "status": "Active",
+          "keywords": ["cart", "remove"]
+        },
+        {
+          "id": "TC_CART_005",
+          "testName": "testRemoveAllItemsFromCart",
+          "description": "Verify removing all items results in empty cart",
+          "severity": "HIGH",
+          "story": "Cart Management",
+          "preconditions": [
+            "User is logged in",
+            "Cart contains items"
+          ],
+          "steps": [
+            "1. Navigate to cart",
+            "2. Remove all items one by one",
+            "3. Verify cart is empty"
+          ],
+          "expectedResult": [
+            "Cart should be empty",
+            "Item count should be 0",
+            "Empty cart message should display"
+          ],
+          "priority": 5,
+          "status": "Active",
+          "keywords": ["cart", "remove", "empty"]
+        },
+        {
+          "id": "TC_CART_006",
+          "testName": "testContinueShopping",
+          "description": "Verify Continue Shopping returns to products page",
+          "severity": "CRITICAL",
+          "story": "Cart Navigation",
+          "preconditions": [
+            "User is logged in",
+            "User is on cart page with items"
+          ],
+          "steps": [
+            "1. Click 'Continue Shopping' button",
+            "2. Verify navigation"
+          ],
+          "expectedResult": [
+            "Should navigate back to Products page",
+            "Cart items should be preserved"
+          ],
+          "priority": 6,
+          "status": "Active",
+          "keywords": ["cart", "navigation", "continue-shopping"]
+        },
+        {
+          "id": "TC_CART_007",
+          "testName": "testProceedToCheckout",
+          "description": "Verify cart proceeds to checkout step one",
+          "severity": "BLOCKER",
+          "story": "Checkout Flow",
+          "preconditions": [
+            "User is logged in",
+            "User is on cart page with items"
+          ],
+          "steps": [
+            "1. Click 'Proceed to Checkout' button",
+            "2. Verify checkout page loads"
+          ],
+          "expectedResult": [
+            "Should navigate to Checkout Step One",
+            "Customer information form should be displayed"
+          ],
+          "priority": 7,
+          "status": "Active",
+          "keywords": ["cart", "checkout", "navigation"]
+        }
+      ]
+    },
+    {
+      "id": "TS004",
+      "name": "Checkout Process Tests",
+      "feature": "Checkout Process",
+      "description": "Test suite covering checkout information entry, order overview, and payment/delivery details",
+      "totalTestCases": 10,
+      "testCases": [
+        {
+          "id": "TC_CHECKOUT_001",
+          "testName": "testCheckoutStepOneLoads",
+          "description": "Verify checkout step one page loads correctly",
+          "severity": "BLOCKER",
+          "story": "Checkout Step One - Information",
+          "preconditions": [
+            "User is logged in",
+            "Cart contains items",
+            "User has navigated to checkout"
+          ],
+          "steps": [
+            "1. Verify checkout page loads",
+            "2. Verify step title"
+          ],
+          "expectedResult": [
+            "Should be on Checkout Step One page",
+            "Page title should contain 'Your Information'",
+            "Form fields should be displayed"
+          ],
+          "priority": 1,
+          "status": "Active",
+          "keywords": ["checkout", "page-load", "step-one"]
+        },
+        {
+          "id": "TC_CHECKOUT_002",
+          "testName": "testValidCheckoutInfo",
+          "description": "Verify valid customer info proceeds to step two",
+          "severity": "BLOCKER",
+          "story": "Checkout Step One - Information",
+          "preconditions": [
+            "User is on Checkout Step One",
+            "Valid customer data is available"
+          ],
+          "steps": [
+            "1. Enter first name",
+            "2. Enter last name",
+            "3. Enter postal code",
+            "4. Click Continue button"
+          ],
+          "expectedResult": [
+            "Should proceed to Checkout Step Two (Overview)",
+            "Customer information should be saved"
+          ],
+          "priority": 2,
+          "status": "Active",
+          "keywords": ["checkout", "validation", "data-driven"]
+        },
+        {
+          "id": "TC_CHECKOUT_003",
+          "testName": "testInvalidCheckoutInfo",
+          "description": "Verify error messages for missing checkout info",
+          "severity": "CRITICAL",
+          "story": "Checkout Step One - Information",
+          "preconditions": [
+            "User is on Checkout Step One",
+            "Invalid/missing data is prepared"
+          ],
+          "steps": [
+            "1. Enter invalid/missing data",
+            "2. Click Continue button",
+            "3. Verify error message"
+          ],
+          "expectedResult": [
+            "Error message should be displayed",
+            "Should match expected error text",
+            "User should remain on Step One"
+          ],
+          "priority": 3,
+          "status": "Active",
+          "keywords": ["checkout", "validation", "error-handling"]
+        },
+        {
+          "id": "TC_CHECKOUT_004",
+          "testName": "testAllFieldsEmpty",
+          "description": "Verify all empty fields shows first name required error",
+          "severity": "CRITICAL",
+          "story": "Checkout Step One - Information",
+          "preconditions": [
+            "User is on Checkout Step One",
+            "All fields are empty"
+          ],
+          "steps": [
+            "1. Leave all fields empty",
+            "2. Click Continue button",
+            "3. Verify error message"
+          ],
+          "expectedResult": [
+            "Error message should be displayed",
+            "Error should mention 'First Name is required'"
+          ],
+          "priority": 4,
+          "status": "Active",
+          "keywords": ["checkout", "validation", "required-fields"]
+        },
+        {
+          "id": "TC_CHECKOUT_005",
+          "testName": "testCancelOnStepOne",
+          "description": "Verify cancel on step one returns to cart",
+          "severity": "HIGH",
+          "story": "Checkout Step One - Navigation",
+          "preconditions": [
+            "User is on Checkout Step One"
+          ],
+          "steps": [
+            "1. Click Cancel button",
+            "2. Verify navigation"
+          ],
+          "expectedResult": [
+            "Should return to cart page",
+            "Cart items should be preserved"
+          ],
+          "priority": 5,
+          "status": "Active",
+          "keywords": ["checkout", "navigation", "cancel"]
+        },
+        {
+          "id": "TC_CHECKOUT_006",
+          "testName": "testOverviewShowsSingleItem",
+          "description": "Verify checkout overview shows correct single item",
+          "severity": "BLOCKER",
+          "story": "Checkout Step Two - Overview",
+          "preconditions": [
+            "User has filled in checkout Step One",
+            "User has 1 item in cart"
+          ],
+          "steps": [
+            "1. Verify on Step Two page",
+            "2. Check item details in overview",
+            "3. Verify pricing"
+          ],
+          "expectedResult": [
+            "Should be on Checkout Overview page",
+            "Overview should show 1 item",
+            "Item name should be 'Sauce Labs Backpack'",
+            "Price should be '$29.99'"
+          ],
+          "priority": 6,
+          "status": "Active",
+          "keywords": ["checkout", "overview", "items"]
+        },
+        {
+          "id": "TC_CHECKOUT_007",
+          "testName": "testOverviewShowsMultipleItems",
+          "description": "Verify checkout overview shows correct multiple items",
+          "severity": "BLOCKER",
+          "story": "Checkout Step Two - Overview",
+          "preconditions": [
+            "User has filled in checkout Step One",
+            "User has 3 items in cart"
+          ],
+          "steps": [
+            "1. Verify on Step Two page",
+            "2. Check all items in overview"
+          ],
+          "expectedResult": [
+            "Should show 3 items",
+            "All item names should be correct",
+            "All prices should be displayed"
+          ],
+          "priority": 7,
+          "status": "Active",
+          "keywords": ["checkout", "overview", "multiple-items"]
+        },
+        {
+          "id": "TC_CHECKOUT_008",
+          "testName": "testSubtotalSingleItem",
+          "description": "Verify subtotal calculation is correct for single item",
+          "severity": "CRITICAL",
+          "story": "Checkout Step Two - Pricing",
+          "preconditions": [
+            "User is on Checkout Step Two",
+            "Cart has 1 item (Backpack)"
+          ],
+          "steps": [
+            "1. Check subtotal amount",
+            "2. Verify calculation"
+          ],
+          "expectedResult": [
+            "Subtotal should be $29.99"
+          ],
+          "priority": 8,
+          "status": "Active",
+          "keywords": ["checkout", "pricing", "subtotal"]
+        },
+        {
+          "id": "TC_CHECKOUT_009",
+          "testName": "testSubtotalMultipleItems",
+          "description": "Verify subtotal calculation is correct for multiple items",
+          "severity": "CRITICAL",
+          "story": "Checkout Step Two - Pricing",
+          "preconditions": [
+            "User is on Checkout Step Two",
+            "Cart has 3 items (Backpack, Bike Light, Onesie)"
+          ],
+          "steps": [
+            "1. Check subtotal amount",
+            "2. Verify calculation (29.99 + 9.99 + 7.99 = 47.97)"
+          ],
+          "expectedResult": [
+            "Subtotal should equal sum of all item prices",
+            "Subtotal should be $47.97"
+          ],
+          "priority": 9,
+          "status": "Active",
+          "keywords": ["checkout", "pricing", "subtotal", "calculation"]
+        },
+        {
+          "id": "TC_CHECKOUT_010",
+          "testName": "testTaxCalculation",
+          "description": "Verify tax is calculated correctly",
+          "severity": "CRITICAL",
+          "story": "Checkout Step Two - Pricing",
+          "preconditions": [
+            "User is on Checkout Step Two",
+            "Subtotal is calculated"
+          ],
+          "steps": [
+            "1. Get subtotal amount",
+            "2. Get tax amount",
+            "3. Verify tax calculation (approximately 8%)"
+          ],
+          "expectedResult": [
+            "Tax should be calculated as 8% of subtotal",
+            "Tax calculation should be accurate within 0.02 margin"
+          ],
+          "priority": 10,
+          "status": "Active",
+          "keywords": ["checkout", "pricing", "tax", "calculation"]
+        }
+      ]
+    }
+  ]
+}
+

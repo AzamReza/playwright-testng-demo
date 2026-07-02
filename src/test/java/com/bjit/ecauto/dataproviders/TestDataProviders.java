@@ -24,6 +24,16 @@ public class TestDataProviders {
         };
     }
 
+    @DataProvider(name = "accessibilityInvalidLoginData")
+    public static Object[][] accessibilityInvalidLoginData() {
+        return new Object[][] {
+                // { username,        password,         expectedErrorFragment }
+                { "",               "",               "Username is required" },
+                { "standard_user",  "wrong_password", "Username and password do not match" },
+                { "locked_out_user", "secret_sauce",  "locked out" }
+        };
+    }
+
     @DataProvider(name = "allUserTypes")
     public static Object[][] allUserTypes() {
         return new Object[][] {

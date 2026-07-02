@@ -28,5 +28,10 @@ public abstract class AbstractLoginTest extends BaseTest implements ILoginAction
         loginPage.navigate();
         return loginPage;
     }
+
+    @Override
+    public void testLogout() {
+
+    }
 }
 

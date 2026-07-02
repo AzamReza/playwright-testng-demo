@@ -37,4 +37,10 @@
         </classes>
     </test>
 
+    <test name="Accessibility Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.AccessibilityTest"/>
+        </classes>
+    </test>
+
 </suite>

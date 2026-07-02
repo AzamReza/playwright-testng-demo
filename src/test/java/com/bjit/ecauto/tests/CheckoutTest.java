@@ -4,6 +4,7 @@ import com.bjit.ecauto.base.AbstractCheckoutTest;
 import com.bjit.ecauto.dataproviders.TestDataProviders;
 import com.bjit.ecauto.pages.CartPage;
 import com.bjit.ecauto.pages.CheckoutPage;
+import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -24,6 +25,9 @@ public class CheckoutTest extends AbstractCheckoutTest {
     @Override
     @Story("Checkout Step One - Information")
     @Severity(SeverityLevel.BLOCKER)
+    @Description("Preconditions: User in cart with items, clicked 'Proceed to Checkout'\n" +
+            "Steps: Verify checkout page loads and displays step one form\n" +
+            "Expected: On Checkout Step One, title contains 'Your Information', form fields visible")
     @Test(priority = 1,
             description = "Verify checkout step one page loads correctly")
     public void testCheckoutStepOneLoads() {
@@ -107,6 +111,11 @@ public class CheckoutTest extends AbstractCheckoutTest {
     // ========================================================
 
     @Override
+    @Story("Checkout Step Two - Overview")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Preconditions: User on Checkout Step Two for single item (Backpack)\n" +
+            "Steps: Verify step two page displays, check item details and price\n" +
+            "Expected: Shows 1 item (Backpack), price $29.99")
     @Test(priority = 6,
             description = "Verify checkout overview shows correct single item")
     public void testOverviewShowsSingleItem() {
@@ -173,6 +182,11 @@ public class CheckoutTest extends AbstractCheckoutTest {
     }
 
     @Override
+    @Story("Checkout Step Two - Pricing")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Preconditions: User on Checkout Overview, subtotal calculated\n" +
+            "Steps: Retrieve subtotal and tax amounts, verify tax = 8% of subtotal\n" +
+            "Expected: Tax calculated correctly (approximately 8% with 0.02 tolerance)")
     @Test(priority = 10,
             description = "Verify tax is calculated correctly")
     public void testTaxCalculation() {

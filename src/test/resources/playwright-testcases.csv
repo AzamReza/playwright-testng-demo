@@ -1,0 +1,356 @@
+﻿Test Module,Test Case ID,Test Case Name,Description,Preconditions,Steps,Expected Results,Severity,Priority,Status,Links,Notes
+AccessibilityTest,ACC_001,Verify login form controls are discoverable by accessibility roles,"Verify login form controls are discoverable by accessibility roles","Login page is loaded","1. Query username field by role
+2. Query password field by role
+3. Query login button by role","All form controls are discoverable by their accessibility roles",CRITICAL,1,Ready,,
+AccessibilityTest,ACC_002,Verify login form keyboard focus order,"Verify login form keyboard focus order","Login page is loaded","1. Click username field
+2. Press Tab to navigate focus
+3. Verify focus moves to next element
+4. Continue Tab navigation","Focus order follows: Username -> Password -> Login button",CRITICAL,2,Ready,,
+AccessibilityTest,ACC_003,Verify login form supports keyboard-only submission,"Verify login form supports keyboard-only submission","Valid credentials available","1. Navigate to login page
+2. Enter valid username (Tab navigation)
+3. Enter valid password (Tab navigation)
+4. Press Enter to submit","Form submits and user navigates to inventory page",CRITICAL,4,Ready,,
+AccessibilityTest,ACC_004,Example 1: run axe scan on an entire page,"Verify axe accessibility scan completes on login page","Login page is loaded","1. Run axe scan on entire page
+2. Analyze results
+3. Generate report","Axe scan completes with report of accessibility violations",NORMAL,5,Ready,,
+AccessibilityTest,ACC_005,Example 2: include only a specific section after interaction,"Verify axe scan on specific section after interaction","Fixture page is loaded","1. Click menu button
+2. Wait for dropdown to appear
+3. Run axe scan on navigation section","Section scan completes successfully",NORMAL,6,Ready,,
+AccessibilityTest,ACC_006,Example 3: run axe scan with WCAG tags,"Verify axe scan with WCAG tags filters correctly","Fixture page is loaded","1. Configure axe to use WCAG AA tags
+2. Run scan with tag filter
+3. Review results","Only WCAG-relevant violations are reported",NORMAL,7,Ready,,
+AccessibilityTest,ACC_007,Handling known issues: exclude problematic element from scan,"Verify element exclusion from accessibility scan","Fixture page is loaded","1. Configure axe to exclude specific element
+2. Run accessibility scan
+3. Verify excluded element is omitted","Excluded element is not included in violations",NORMAL,8,Ready,,
+AccessibilityTest,ACC_008,Handling known issues: disable specific axe rule,"Verify specific accessibility rule is disabled","Fixture page is loaded","1. Configure axe to disable specific rule (e.g., color-contrast)
+2. Run scan
+3. Verify rule violations not reported","Disabled rule violations do not appear in results",NORMAL,9,Ready,,
+AccessibilityTest,ACC_009,Handling known issues: fingerprint expected violations,"Verify fingerprinting expected violations","Fixture page is loaded","1. Create fingerprint of known violations
+2. Run scan
+3. Compare results with fingerprint","Expected violations are identified and filtered",NORMAL,10,Ready,,
+AccessibilityTest,ACC_010,Use fixture-style shared axe configuration,"Verify fixture-style shared axe configuration works","Fixture page is loaded","1. Use makeAxeBuilder() to create shared config
+2. Run multiple scans with shared config
+3. Verify consistency","All scans use consistent configuration",NORMAL,11,Ready,,
+ActionabilityTest,ACT_001,Check element visibility state,"Verify isVisible() correctly identifies visible vs hidden elements","Page with visible and hidden elements loaded","1. Check visibility of visible button
+2. Check visibility of hidden button (hidden attr)
+3. Check display: none element
+4. Check visibility: hidden element","All visibility states are correctly identified",NORMAL,1,Ready,,
+ActionabilityTest,ACT_002,Hidden element click fails,"Verify hidden elements fail actionability checks","Page with hidden button loaded","1. Verify element is not visible
+2. Attempt to click hidden button
+3. Capture error","Click fails with actionability error",CRITICAL,2,Ready,,
+ActionabilityTest,ACT_003,Element covered by overlay not actionable,"Verify overlay-covered elements are not actionable","Page with overlay covering elements loaded","1. Verify element exists in DOM
+2. Verify element is covered by overlay
+3. Attempt to click covered element
+4. Capture error","Click fails - element not actionable due to overlay",CRITICAL,3,Ready,,
+ActionabilityTest,ACT_004,Check element enabled state,"Verify isEnabled() correctly identifies enabled/disabled elements","Page with enabled and disabled buttons loaded","1. Check enabled state of enabled button
+2. Check enabled state of disabled button","Enabled/disabled states are correctly identified",NORMAL,4,Ready,,
+ActionabilityTest,ACT_005,Disabled element click fails,"Verify disabled elements fail actionability checks","Page with disabled button loaded","1. Verify element is disabled
+2. Attempt to click disabled button
+3. Capture error","Click fails with actionability error",CRITICAL,5,Ready,,
+ActionabilityTest,ACT_006,Runtime disable affects actionability,"Verify runtime disable() API affects actionability","Page with button that can be disabled loaded","1. Click button (succeeds while enabled)
+2. Disable button via JavaScript
+3. Attempt to click disabled button
+4. Capture error","Click fails after runtime disable",CRITICAL,6,Ready,,
+ActionabilityTest,ACT_007,Check input editable state,"Verify isEditable() correctly identifies editable/readonly inputs","Page with editable and readonly inputs loaded","1. Check editable state of text input
+2. Check editable state of readonly input","Editable/readonly states are correctly identified",NORMAL,7,Ready,,
+ActionabilityTest,ACT_008,Fill on readonly input fails,"Verify fill() fails on readonly input","Page with readonly input loaded","1. Verify input is readonly
+2. Attempt to fill readonly input
+3. Capture error","Fill fails with error",CRITICAL,8,Ready,,
+ActionabilityTest,ACT_009,Bypass editable check with evaluate,"Verify bypass editable check using page.evaluate()","Page with readonly input loaded","1. Use evaluate() to directly set input value
+2. Verify value is set
+3. Compare with normal fill() failure","Value is set directly bypassing actionability checks",NORMAL,9,Ready,,
+ActionabilityTest,ACT_010,Wait for element to become visible,"Verify waitForVisible() waits for element appearance","Page with element that becomes visible after delay loaded","1. Element is initially hidden
+2. Element becomes visible after 1 second
+3. Wait for visibility
+4. Click element","Element becomes visible and is clickable",NORMAL,10,Ready,,
+ActionabilityTest,ACT_012,Actionability timeout,"Verify actionability timeout is enforced","Page with slowly appearing element loaded","1. Wait for element visibility with short timeout
+2. Capture timeout error","Timeout error is thrown when element not ready",NORMAL,12,Ready,,
+ActionabilityTest,ACT_013,Auto-scroll element into viewport,"Verify element is auto-scrolled into viewport","Page with element outside viewport loaded","1. Locate element outside viewport
+2. Attempt to click element
+3. Element is automatically scrolled into view
+4. Click succeeds","Element is scrolled into viewport and clicked successfully",NORMAL,13,Ready,,
+ActionabilityTest,ACT_015,Login form element actionability,"Verify login form elements are actionable","Login page is loaded","1. Click username field
+2. Enter text
+3. Click password field
+4. Enter text
+5. Click login button","All login form elements are actionable without errors",NORMAL,15,Ready,,
+ActionabilityTest,ACT_017,Checkbox actionability,"Verify checkbox element is actionable and toggles state","Page with checkbox loaded","1. Verify checkbox is visible
+2. Click to check
+3. Click to uncheck
+4. Verify state changes","Checkbox state toggles correctly",NORMAL,17,Ready,,
+ActionabilityTest,ACT_018,Hidden checkbox not actionable,"Verify hidden checkbox cannot be clicked","Page with hidden checkbox loaded","1. Verify checkbox is hidden
+2. Attempt to click hidden checkbox
+3. Capture error","Click fails with actionability error",NORMAL,18,Ready,,
+ActionabilityTest,ACT_019,Disabled select not actionable,"Verify disabled select element is not actionable","Page with disabled select loaded","1. Verify select is disabled
+2. Attempt to select option
+3. Capture error","Select fails with actionability error",NORMAL,19,Ready,,
+ActionabilityTest,ACT_020,Focus on actionable element,"Verify focus() sets focus on actionable element","Page with focusable elements loaded","1. Focus element via focus() method
+2. Verify focus is set
+3. Type text
+4. Verify text is entered","Focus is correctly set on element",NORMAL,20,Ready,,
+ActionabilityTest,ACT_022,Modal element actionability,"Verify elements within modal are actionable","Page with modal dialog loaded","1. Open modal
+2. Locate button in modal
+3. Click button
+4. Verify button is actionable","Button within modal is clickable and actionable",NORMAL,22,Ready,,
+AutoWaitingTest,AWO_001,Fill text input with value and verify,"Fill text input with value and verify","Login page is loaded","1. Locate username input field
+2. Fill with test username
+3. Retrieve input value","Input contains filled value (standard_user)",NORMAL,1,Ready,,
+AutoWaitingTest,AWO_002,Clear input field and replace with new value,"Clear input field and replace with new value","Login page is loaded","1. Fill initial value (locked_out_user)
+2. Clear field with fill('')
+3. Fill new value (standard_user)","Input contains only the final value",NORMAL,2,Ready,,
+AutoWaitingTest,AWO_003,Compare type() vs fill() event triggering,"Compare type() vs fill() event triggering","Page with event-tracking inputs loaded","1. Use fill() on one input
+2. Use type() on another input
+3. Check keypress count
+4. Verify difference","fill() doesn't trigger events; type() triggers keydown/keyup events",NORMAL,3,Ready,,
+AutoWaitingTest,AWO_004,Type with delay for human-like interaction,"Type with delay for human-like interaction","Login page is loaded","1. Type username with 100ms delay between keys
+2. Verify final value is correct","Username is entered with human-like typing speed",NORMAL,4,Ready,,
+AutoWaitingTest,AWO_005,Verify Tab key navigation through form controls,"Verify Tab key navigation through form controls","Login page is loaded","1. Click username field
+2. Press Tab to move to password field
+3. Press Tab to move to login button
+4. Verify focus position at each step","Focus order follows: Username -> Password -> Login button",CRITICAL,5,Ready,,
+AutoWaitingTest,AWO_006,Shift+Tab reverse focus navigation,"Shift+Tab reverse focus navigation","Login page is loaded","1. Click username field
+2. Press Tab to move to password field
+3. Press Shift+Tab to move back to username","Focus moves backward to previous element",NORMAL,6,Ready,,
+AutoWaitingTest,AWO_007,Submit form using Enter key from password field,"Submit form using Enter key from password field","Valid credentials available","1. Navigate to login page
+2. Enter valid username
+3. Enter valid password
+4. Press Enter to submit","Form is submitted and user navigates to inventory page",CRITICAL,7,Ready,,
+AutoWaitingTest,AWO_008,Escape key closes dialog elements,"Escape key closes dialog elements","Page with modal dialog loaded","1. Open modal
+2. Press Escape key
+3. Verify modal closes","Modal closes when Escape key is pressed",NORMAL,8,Ready,,
+AutoWaitingTest,AWO_009,Use press() for single character deletion,"Use press() for single character deletion","Page with text input loaded","1. Input contains 'hello world'
+2. Click field and move to end (End key)
+3. Press Backspace twice
+4. Verify value changes","Characters are deleted - value becomes 'hello wor'",NORMAL,9,Ready,,
+AutoWaitingTest,AWO_010,Use press() for key combinations,"Use press() for key combinations","Page with text input loaded","1. Click field
+2. Press Control+A to select all
+3. Verify select event is triggered","Ctrl+A triggers select event and selects all text",NORMAL,10,Ready,,
+AutoWaitingTest,AWO_011,Toggle checkbox with single and double click,"Toggle checkbox with single and double click","Page with checkbox loaded","1. Click to check
+2. Verify checked state
+3. Click to uncheck
+4. Verify unchecked state","Checkbox toggles between checked and unchecked states",NORMAL,11,Ready,,
+AutoWaitingTest,AWO_012,Radio button mutual exclusion via click,"Radio button mutual exclusion via click","Page with radio button group loaded","1. Click standard shipping option
+2. Click express option
+3. Click overnight option
+4. Verify only one is selected at a time","Only one radio button in group is selected at a time",NORMAL,12,Ready,,
+AutoWaitingTest,AWO_013,Double-click triggers edit mode,"Double-click triggers edit mode","Page with editable span element loaded","1. Verify span is visible
+2. Click twice to trigger dblclick
+3. Verify input field becomes visible
+4. Edit text in input
+5. Blur to save
+6. Verify span text is updated","Double-click transitions element to edit mode",NORMAL,13,Ready,,
+AutoWaitingTest,AWO_014,Select dropdown option by value,"Select dropdown option by value","Page with country dropdown loaded","1. Select option by value 'us'
+2. Verify input value is 'us'
+3. Select 'uk'
+4. Verify input value is 'uk'","Dropdown selection works by value attribute",NORMAL,14,Ready,,
+AutoWaitingTest,AWO_015,Select dropdown option by visible label,"Select dropdown option by visible label","Page with country dropdown loaded","1. Select option 'Canada' by text
+2. Verify input value is 'ca'
+3. Select 'United Kingdom'
+4. Verify input value is 'uk'","Dropdown selection works by visible label text",NORMAL,15,Ready,,
+AutoWaitingTest,AWO_016,Multi-select choose multiple options,"Multi-select choose multiple options","Page with multi-select dropdown loaded","1. Select 'sports' and 'tech' options
+2. Evaluate selected options
+3. Verify both are in selectedOptions","Both selected values appear in selectedOptions array",NORMAL,16,Ready,,
+AutoWaitingTest,AWO_017,Use focus() to set element focus,"Use focus() to set element focus","Page with multiple input fields loaded","1. Use focus() on field1
+2. Verify field1 is focused
+3. Use focus() on field2
+4. Verify field2 is focused","Focus moves to specified element - focus events fire",NORMAL,17,Ready,,
+AutoWaitingTest,AWO_018,Use blur() to remove element focus,"Use blur() to remove element focus","Page with input field loaded","1. Focus element
+2. Verify element is focused
+3. Call blur()
+4. Verify blur event fires","Element loses focus - blur event fires",NORMAL,18,Ready,,
+AutoWaitingTest,AWO_019,Email input type validation,"Email input type validation","Page with email input form loaded","1. Enter invalid email (not-an-email)
+2. Verify form is invalid
+3. Enter valid email (valid@example.com)
+4. Verify form is valid","Form validation rejects invalid and accepts valid email",NORMAL,19,Ready,,
+AutoWaitingTest,AWO_020,Required input field validation,"Required input field validation","Page with required input form loaded","1. Leave field empty
+2. Verify form is invalid
+3. Enter text
+4. Verify form is valid","Form validation requires field to be filled",NORMAL,20,Ready,,
+APITest,API_001,GET request execution,"GET request execution","API endpoint is available","1. Execute GET request
+2. Verify response status
+3. Parse response body","GET request succeeds with 200 status",NORMAL,1,Ready,,
+APITest,API_002,POST request with JSON,"POST request with JSON","API endpoint accepts POST","1. Create JSON payload
+2. Execute POST request
+3. Verify response","POST request succeeds with JSON data",NORMAL,2,Ready,,
+APITest,API_003,PUT request update,"PUT request update","API endpoint supports PUT","1. Create update payload
+2. Execute PUT request
+3. Verify resource updated","PUT request succeeds and resource is updated",NORMAL,3,Ready,,
+APITest,API_004,DELETE request,"DELETE request","API endpoint supports DELETE","1. Execute DELETE request
+2. Verify response status
+3. Verify resource deleted","DELETE request succeeds and resource is removed",NORMAL,4,Ready,,
+APITest,API_005,Request with custom headers,"Request with custom headers","API endpoint available","1. Create custom header
+2. Execute request with header
+3. Verify header is sent","Request includes custom headers",NORMAL,5,Ready,,
+APITest,API_006,Response headers validation,"Response headers validation","API endpoint available","1. Execute API request
+2. Extract response headers
+3. Validate required headers present","Response contains expected headers",NORMAL,6,Ready,,
+APITest,API_007,JSON response parsing,"JSON response parsing","API returns JSON response","1. Execute API request
+2. Parse JSON response
+3. Verify expected fields","JSON response is correctly parsed",NORMAL,7,Ready,,
+APITest,API_008,Error response handling,"Error response handling","API endpoint that can 404","1. Execute request to invalid endpoint
+2. Capture error response
+3. Verify error status and message","API returns proper error codes (4xx/5xx)",NORMAL,8,Ready,,
+APITest,API_009,Multiple sequential requests,"Multiple sequential requests","API endpoint available","1. Execute first request
+2. Execute second request
+3. Execute third request
+4. Verify all succeed","Multiple sequential API calls execute successfully",NORMAL,9,Ready,,
+APITest,API_010,Query parameters in API request,"Query parameters in API request","API endpoint accepts query params","1. Build request with query parameters
+2. Execute request
+3. Verify parameters in request","Query parameters are correctly included in request",NORMAL,10,Ready,,
+AssertionsTest,ASS_001,Element visibility assertion,"Element visibility assertion","Page with visible element loaded","1. Assert element is visible
+2. Capture assertion result","Visibility assertion passes",NORMAL,1,Ready,,
+AssertionsTest,ASS_002,Element hidden assertion,"Element hidden assertion","Page with hidden element loaded","1. Assert element is hidden
+2. Capture assertion result","Hidden assertion passes",NORMAL,2,Ready,,
+AssertionsTest,ASS_003,Text content assertion,"Text content assertion","Page with text element loaded","1. Assert element contains text
+2. Capture assertion result","Text content assertion passes",NORMAL,3,Ready,,
+AssertionsTest,ASS_004,Exact text assertion,"Exact text assertion","Page with text element loaded","1. Assert element has exact text
+2. Capture assertion result","Exact text assertion passes",NORMAL,4,Ready,,
+AssertionsTest,ASS_005,Attribute value assertion,"Attribute value assertion","Page with element having attributes loaded","1. Assert element attribute value
+2. Capture assertion result","Attribute assertion passes",NORMAL,5,Ready,,
+AssertionsTest,ASS_006,Enabled state assertion,"Enabled state assertion","Page with enabled/disabled elements loaded","1. Assert element is enabled
+2. Capture assertion result","Enabled assertion passes",NORMAL,6,Ready,,
+AssertionsTest,ASS_007,Checkbox state assertion,"Checkbox state assertion","Page with checkbox loaded","1. Assert checkbox is checked
+2. Capture assertion result","Checkbox assertion passes",NORMAL,7,Ready,,
+AssertionsTest,ASS_008,Element count assertion,"Element count assertion","Page with multiple elements loaded","1. Assert specific count of elements
+2. Capture assertion result","Element count assertion passes",NORMAL,8,Ready,,
+AssertionsTest,ASS_009,URL assertion,"URL assertion","Page with URL loaded","1. Assert current URL
+2. Capture assertion result","URL assertion passes",NORMAL,9,Ready,,
+AssertionsTest,ASS_010,Multiple elements assertion,"Multiple elements assertion","Page with multiple matching elements loaded","1. Assert all elements match criteria
+2. Capture assertion result","Multiple element assertions pass",NORMAL,10,Ready,,
+AssertionsTest,ASS_011,Text pattern assertion,"Text pattern assertion","Page with text element loaded","1. Assert text matches pattern
+2. Capture assertion result","Pattern assertion passes",NORMAL,11,Ready,,
+AssertionsTest,ASS_012,CSS class assertion,"CSS class assertion","Page with element having classes loaded","1. Assert element has CSS class
+2. Capture assertion result","Class assertion passes",NORMAL,12,Ready,,
+AssertionsTest,ASS_013,Editable assertion,"Editable assertion","Page with editable input loaded","1. Assert element is editable
+2. Capture assertion result","Editable assertion passes",NORMAL,13,Ready,,
+AssertionsTest,ASS_014,Focus state assertion,"Focus state assertion","Page with focusable element loaded","1. Focus element
+2. Assert element is focused
+3. Capture assertion result","Focus assertion passes",NORMAL,14,Ready,,
+AssertionsTest,ASS_015,Negation assertion,"Negation assertion","Page with element loaded","1. Assert element is NOT visible
+2. Capture negation result","Negation assertion passes",NORMAL,15,Ready,,
+AuthenticationTest,AUTH_001,Valid login flow,"Valid login flow","Valid test credentials available","1. Navigate to login page
+2. Enter valid username (standard_user)
+3. Enter valid password
+4. Click login button","User successfully logs in and is redirected to inventory page",CRITICAL,1,Ready,,
+AuthenticationTest,AUTH_002,Invalid username login,"Invalid username login","Test credentials available","1. Navigate to login page
+2. Enter invalid username
+3. Enter valid password
+4. Click login button
+5. Capture error","Login fails with error message 'Username or password mismatch'",NORMAL,2,Ready,,
+AuthenticationTest,AUTH_003,Invalid password login,"Invalid password login","Test credentials available","1. Navigate to login page
+2. Enter valid username
+3. Enter invalid password
+4. Click login button
+5. Capture error","Login fails with error message 'Username or password mismatch'",NORMAL,3,Ready,,
+AuthenticationTest,AUTH_004,Empty credentials login,"Empty credentials login","Login page is loaded","1. Navigate to login page
+2. Leave both fields empty
+3. Click login button
+4. Capture validation messages","Login fails with validation errors for empty fields",NORMAL,4,Ready,,
+AuthenticationTest,AUTH_005,Login and logout flow,"Login and logout flow","Valid test credentials available","1. Log in with valid credentials
+2. Verify user is logged in
+3. Click logout button
+4. Verify user returns to login page","User successfully logs in and out",CRITICAL,5,Ready,,
+AuthenticationTest,AUTH_006,Session persistence,"Session persistence","User is logged in","1. Navigate to other pages while logged in
+2. Verify session persists
+3. Check user is still logged in on each page","Session persists across page navigation",NORMAL,6,Ready,,
+AuthenticationTest,AUTH_007,Locked user login,"Locked user login","Locked username available (locked_out_user)","1. Navigate to login page
+2. Enter locked username
+3. Enter any password
+4. Click login button
+5. Capture error","Login fails with 'User is locked out' error message",NORMAL,7,Ready,,
+AuthenticationTest,AUTH_008,Multiple user login switching,"Multiple user login switching","Multiple valid test accounts available","1. Log in as user1
+2. Log out
+3. Log in as user2
+4. Verify user2 is logged in","Users can switch between accounts successfully",NORMAL,8,Ready,,
+AuthenticationTest,AUTH_009,Direct protected page access,"Direct protected page access without login","User not logged in","1. Navigate directly to protected page URL
+2. Verify user is redirected to login page","User cannot access protected pages without authentication",CRITICAL,9,Ready,,
+AuthenticationTest,AUTH_010,Unauthorized access prevention,"Unauthorized access prevention","User is logged in as standard user","1. Try to access admin-only pages
+2. Capture access denial response","User is prevented from accessing unauthorized pages",NORMAL,10,Ready,,
+AuthenticationTest,AUTH_011,Credentials validation,"Credentials validation","Test credentials available","1. Verify username format validation
+2. Verify password requirements
+3. Test edge cases (special chars, spaces)","Credentials are validated according to requirements",NORMAL,11,Ready,,
+AuthenticationTest,AUTH_012,Case sensitivity check,"Case sensitivity check","Test credentials available","1. Try login with different case username
+2. Try login with different case password
+3. Verify if case matters","Auth determines if credentials are case-sensitive",NORMAL,12,Ready,,
+AuthenticationTest,AUTH_013,Login button state,"Login button state","Login page is loaded","1. Verify login button is enabled
+2. Enter credentials
+3. Verify button is clickable","Login button is properly enabled/disabled based on state",NORMAL,13,Ready,,
+AuthenticationTest,AUTH_014,Error message display,"Error message display","Login with invalid credentials","1. Submit invalid credentials
+2. Capture error message
+3. Verify message clarity and accuracy","Error messages are clearly displayed and helpful",NORMAL,14,Ready,,
+AuthenticationTest,AUTH_015,Session timeout verification,"Session timeout verification","User is logged in","1. Wait for session timeout period
+2. Try to perform action
+3. Verify session times out and user is logged out","Session times out after inactivity period",NORMAL,15,Ready,,
+BrowsersTest,BTH_001,Launch Chromium browser,"Launch Chromium browser","No browser instances running","1. Initialize Playwright
+2. Launch Chromium browser
+3. Create page
+4. Navigate to URL
+5. Verify page loads","Chromium browser launches and loads pages successfully",NORMAL,1,Ready,,
+BrowsersTest,BTH_002,Launch Firefox browser,"Launch Firefox browser","No browser instances running","1. Initialize Playwright
+2. Launch Firefox browser
+3. Create page
+4. Navigate to URL
+5. Verify page loads","Firefox browser launches and loads pages successfully",NORMAL,2,Ready,,
+BrowsersTest,BTH_003,Launch WebKit browser,"Launch WebKit browser","No browser instances running","1. Initialize Playwright
+2. Launch WebKit browser
+3. Create page
+4. Navigate to URL
+5. Verify page loads","WebKit browser launches and loads pages successfully",NORMAL,3,Ready,,
+BrowsersTest,BTH_004,Context isolation verification,"Context isolation verification","Browser instances running","1. Create two separate contexts
+2. Set different cookies in each context
+3. Navigate pages in each context
+4. Verify cookies don't leak between contexts","Contexts are properly isolated from each other",NORMAL,4,Ready,,
+BrowsersTest,BTH_005,Context cookie management,"Context cookie management","Browser context created","1. Add cookie to context
+2. Navigate to page
+3. Verify cookie is sent with request
+4. Modify cookie
+5. Verify modification takes effect","Cookies are properly managed within context",NORMAL,5,Ready,,
+BrowsersTest,BTH_006,Multiple pages in context,"Multiple pages in context","Browser context created","1. Create multiple pages in same context
+2. Navigate each page to different URL
+3. Verify pages are independent
+4. Modify content in one page
+5. Verify other pages unaffected","Multiple pages can exist in same context independently",NORMAL,6,Ready,,
+BrowsersTest,BTH_007,Browser context creation,"Browser context creation","Browser launched","1. Create browser context
+2. Set viewport size
+3. Set user agent
+4. Verify context properties
+5. Close context","Browser context is created with specified properties",NORMAL,7,Ready,,
+DialogsTest,DLG_001,Alert dialog handling,"Alert dialog handling","Page with alert button loaded","1. Set up dialog listener
+2. Click button to trigger alert
+3. Capture dialog message
+4. Accept dialog","Alert dialog is captured and accepted",CRITICAL,1,Ready,,
+DialogsTest,DLG_002,Confirm dialog accept,"Confirm dialog accept","Page with confirm button loaded","1. Set up dialog listener
+2. Click button to trigger confirm
+3. Accept dialog
+4. Verify acceptance action","Confirm dialog is accepted and action proceeds",CRITICAL,2,Ready,,
+DialogsTest,DLG_003,Confirm dialog dismiss,"Confirm dialog dismiss","Page with confirm button loaded","1. Set up dialog listener
+2. Click button to trigger confirm
+3. Dismiss/cancel dialog
+4. Verify cancellation action","Confirm dialog is dismissed and action is cancelled",CRITICAL,3,Ready,,
+DialogsTest,DLG_004,Prompt dialog with input,"Prompt dialog with input","Page with prompt button loaded","1. Set up dialog listener
+2. Click button to trigger prompt
+3. Enter text in prompt
+4. Accept dialog
+5. Verify input is used","Prompt dialog accepts input and uses it",NORMAL,4,Ready,,
+DialogsTest,DLG_005,Prompt dialog default value,"Prompt dialog default value","Page with prompt button loaded","1. Set up dialog listener
+2. Click button to trigger prompt with default
+3. Accept without entering text
+4. Verify default value is used","Prompt uses default value when no input provided",NORMAL,5,Ready,,
+DialogsTest,DLG_006,Multiple sequential dialogs,"Multiple sequential dialogs","Page that triggers multiple dialogs loaded","1. Trigger first dialog
+2. Accept/handle first
+3. Trigger second dialog
+4. Handle second
+5. Verify all handled correctly","Multiple dialogs can be handled sequentially",NORMAL,6,Ready,,
+DialogsTest,DLG_007,Prompt dialog dismiss,"Prompt dialog dismiss","Page with prompt button loaded","1. Set up dialog listener
+2. Click button to trigger prompt
+3. Dismiss dialog
+4. Verify default value or cancellation used","Prompt dialog dismiss is handled correctly",NORMAL,7,Ready,,
+DialogsTest,DLG_008,Dialog type identification,"Dialog type identification","Page with different dialog types loaded","1. Trigger alert dialog - identify as alert
+2. Trigger confirm dialog - identify as confirm
+3. Trigger prompt dialog - identify as prompt","All dialog types are correctly identified",NORMAL,8,Ready,,
+DialogsTest,DLG_009,Dialog message content,"Dialog message content","Page with dialogs loaded","1. Trigger dialog
+2. Capture message content
+3. Verify message is accurate and clear","Dialog message content is correctly captured and displayed",NORMAL,9,Ready,,
+DialogsTest,DLG_010,Dialog type handling,"Dialog type handling","Page with dialog loaded","1. Verify dialog type (alert/confirm/prompt)
+2. Handle according to type
+3. Verify appropriate response sent","Dialogs are handled according to their type",NORMAL,10,Ready,,

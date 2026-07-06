@@ -58,4 +58,9 @@ mvn compile
 mvn test
 
 mvn test -Dtest=ClassName
-mvn allure:serve 
+mvn allure:report
+mvn allure:serve
+
+git init
+git add .
+git commit -m "Playwright modules 2.0"

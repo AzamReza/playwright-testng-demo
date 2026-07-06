@@ -43,4 +43,22 @@
         </classes>
     </test>
 
+    <test name="Authentication Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.AuthenticationTest"/>
+        </classes>
+    </test>
+
+    <test name="Assertions Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.AssertionsTest"/>
+        </classes>
+    </test>
+
+    <test name="API Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.APITest"/>
+        </classes>
+    </test>
+
 </suite>

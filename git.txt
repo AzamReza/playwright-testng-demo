@@ -64,3 +64,4 @@ mvn allure:serve
 git init
 git add .
 git commit -m "Playwright modules 2.0"
+git push -u origin main

@@ -19440,3 +19440,627 @@ waiting for locator(":root")
 [2026-07-06 13:31:20.567] [INFO ] [main] ################################################
 [2026-07-06 13:31:20.567] [INFO ] [main] SUITE COMPLETED
 [2026-07-06 13:31:20.567] [INFO ] [main] ################################################
+[2026-07-06 14:07:15.328] [INFO ] [main] ################################################
+[2026-07-06 14:07:15.330] [INFO ] [main] SUITE START: SauceDemo Automation Suite
+[2026-07-06 14:07:15.331] [INFO ] [main] Configuration loaded successfully
+[2026-07-06 14:07:15.331] [INFO ] [main] Browser: chromium
+[2026-07-06 14:07:15.332] [INFO ] [main] Headless: true
+[2026-07-06 14:07:15.332] [INFO ] [main] Base URL: https://www.saucedemo.com
+[2026-07-06 14:07:15.333] [INFO ] [main] ################################################
+[2026-07-06 14:07:25.565] [INFO ] [main] Playwright instance created
+[2026-07-06 14:07:25.590] [INFO ] [main] Launching browser: chromium | headless: true | slowMotion: 0ms
+[2026-07-06 14:07:26.600] [INFO ] [main] chromium browser launched
+[2026-07-06 14:07:26.624] [INFO ] [main] ========================================
+[2026-07-06 14:07:26.625] [INFO ] [main] TEST START: testClockInitialization
+[2026-07-06 14:07:26.626] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.017] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:27.138] [INFO ] [main] Clock initialized
+[2026-07-06 14:07:27.149] [INFO ] [main] TEST END: testClockInitialization => PASSED
+[2026-07-06 14:07:27.149] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:27.158] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:27.162] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.162] [INFO ] [main] TEST START: testClockSetFixedTime
+[2026-07-06 14:07:27.162] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.234] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:27.275] [INFO ] [main] TEST END: testClockSetFixedTime => PASSED
+[2026-07-06 14:07:27.276] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:27.281] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:27.283] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.283] [INFO ] [main] TEST START: testClockRunFor
+[2026-07-06 14:07:27.285] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.368] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:27.493] [INFO ] [main] TEST END: testClockRunFor => PASSED
+[2026-07-06 14:07:27.494] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:27.499] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:27.502] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.502] [INFO ] [main] TEST START: testClockFastForward
+[2026-07-06 14:07:27.503] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.576] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:27.767] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testClockFastForward_2026-07-06_14-07-27.png
+[2026-07-06 14:07:27.768] [ERROR] [main] Test FAILED: testClockFastForward
+[2026-07-06 14:07:27.768] [ERROR] [main] Error: Error {
+  message='Clock only understands numbers, 'mm:ss' and 'hh:mm:ss'
+  name='Error
+  stack='Error: Clock only understands numbers, 'mm:ss' and 'hh:mm:ss'
+    at parseTicks (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\clock.js:110:11)
+    at Clock.fastForward (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\clock.js:37:25)
+    at async BrowserContextDispatcher.clockFastForward (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\dispatchers\browserContextDispatcher.js:335:5)
+    at async LongStandingScope._race (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\utils\manualPromise.js:96:14)
+}
+[2026-07-06 14:07:27.768] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testClockFastForward_2026-07-06_14-07-27.png
+[2026-07-06 14:07:27.768] [INFO ] [main] TEST END: testClockFastForward => FAILED
+[2026-07-06 14:07:27.769] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:27.774] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:27.776] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.777] [INFO ] [main] TEST START: testClockPauseAt
+[2026-07-06 14:07:27.777] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.851] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:27.979] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testClockPauseAt_2026-07-06_14-07-27.png
+[2026-07-06 14:07:27.979] [ERROR] [main] Test FAILED: testClockPauseAt
+[2026-07-06 14:07:27.980] [ERROR] [main] Error: Error {
+  message='Error: Cannot fast-forward to the past
+    at ClockController._innerFastForwardTo (eval at evaluate (:234:30), <anonymous>:158:13)
+    at ClockController.pauseAt (eval at evaluate (:234:30), <anonymous>:110:16)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:33)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  name='Error
+  stack='Error: Error: Cannot fast-forward to the past
+    at ClockController._innerFastForwardTo (eval at evaluate (:234:30), <anonymous>:158:13)
+    at ClockController.pauseAt (eval at evaluate (:234:30), <anonymous>:110:16)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:33)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\utils\manualPromise.js:96:14)
+    at async Object.evaluateExpression (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\javascript.js:235:12)
+    at async Frame.raceAgainstEvaluationStallingEvents (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\frames.js:449:14)
+    at async C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\page.js:570:9
+    at async Promise.all (index 0)
+    at async Page.safeNonStallingEvaluateInAllFrames (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\page.js:568:5)
+    at async Promise.all (index 0)
+    at async CRBrowserContext.safeNonStallingEvaluateInAllFrames (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\browserContext.js:526:5)
+    at async Clock._evaluateInFrames (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\clock.js:88:5)
+}
+[2026-07-06 14:07:27.980] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testClockPauseAt_2026-07-06_14-07-27.png
+[2026-07-06 14:07:27.980] [INFO ] [main] TEST END: testClockPauseAt => FAILED
+[2026-07-06 14:07:27.981] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:27.985] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:27.988] [INFO ] [main] ========================================
+[2026-07-06 14:07:27.988] [INFO ] [main] TEST START: testClockResume
+[2026-07-06 14:07:27.989] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.071] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:28.220] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testClockResume_2026-07-06_14-07-28.png
+[2026-07-06 14:07:28.221] [ERROR] [main] Test FAILED: testClockResume
+[2026-07-06 14:07:28.221] [ERROR] [main] Error: Error {
+  message='Error: Cannot fast-forward to the past
+    at ClockController._innerFastForwardTo (eval at evaluate (:234:30), <anonymous>:158:13)
+    at ClockController.pauseAt (eval at evaluate (:234:30), <anonymous>:110:16)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:33)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  name='Error
+  stack='Error: Error: Cannot fast-forward to the past
+    at ClockController._innerFastForwardTo (eval at evaluate (:234:30), <anonymous>:158:13)
+    at ClockController.pauseAt (eval at evaluate (:234:30), <anonymous>:110:16)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:33)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\utils\manualPromise.js:96:14)
+    at async Object.evaluateExpression (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\javascript.js:235:12)
+    at async Frame.raceAgainstEvaluationStallingEvents (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\frames.js:449:14)
+    at async C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\page.js:570:9
+    at async Promise.all (index 0)
+    at async Page.safeNonStallingEvaluateInAllFrames (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\page.js:568:5)
+    at async Promise.all (index 0)
+    at async CRBrowserContext.safeNonStallingEvaluateInAllFrames (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\browserContext.js:526:5)
+    at async Clock._evaluateInFrames (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\clock.js:88:5)
+}
+[2026-07-06 14:07:28.222] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testClockResume_2026-07-06_14-07-28.png
+[2026-07-06 14:07:28.222] [INFO ] [main] TEST END: testClockResume => FAILED
+[2026-07-06 14:07:28.222] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:28.228] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:28.230] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.231] [INFO ] [main] TEST START: testTimeoutExecution
+[2026-07-06 14:07:28.231] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.308] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:28.402] [INFO ] [main] TEST END: testTimeoutExecution => PASSED
+[2026-07-06 14:07:28.402] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:28.406] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:28.408] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.408] [INFO ] [main] TEST START: testIntervalExecution
+[2026-07-06 14:07:28.409] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.501] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:28.582] [INFO ] [main] TEST END: testIntervalExecution => PASSED
+[2026-07-06 14:07:28.582] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:28.588] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:28.590] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.591] [INFO ] [main] TEST START: testCountdownToExpiry
+[2026-07-06 14:07:28.591] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.674] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:28.789] [INFO ] [main] TEST END: testCountdownToExpiry => PASSED
+[2026-07-06 14:07:28.789] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:28.794] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:28.796] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.796] [INFO ] [main] TEST START: testAnimationFrameTiming
+[2026-07-06 14:07:28.796] [INFO ] [main] ========================================
+[2026-07-06 14:07:28.881] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:29.078] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testAnimationFrameTiming_2026-07-06_14-07-28.png
+[2026-07-06 14:07:29.078] [ERROR] [main] Test FAILED: testAnimationFrameTiming
+[2026-07-06 14:07:29.078] [ERROR] [main] Error: Error {
+  message='Clock only understands numbers, 'mm:ss' and 'hh:mm:ss'
+  name='Error
+  stack='Error: Clock only understands numbers, 'mm:ss' and 'hh:mm:ss'
+    at parseTicks (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\clock.js:110:11)
+    at Clock.fastForward (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\clock.js:37:25)
+    at async BrowserContextDispatcher.clockFastForward (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\server\dispatchers\browserContextDispatcher.js:335:5)
+    at async LongStandingScope._race (C:\Users\BJIT\AppData\Local\Temp\playwright-java-15864683464239108086\package\lib\utils\manualPromise.js:96:14)
+}
+[2026-07-06 14:07:29.079] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testAnimationFrameTiming_2026-07-06_14-07-28.png
+[2026-07-06 14:07:29.079] [INFO ] [main] TEST END: testAnimationFrameTiming => FAILED
+[2026-07-06 14:07:29.079] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:29.083] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:29.085] [INFO ] [main] ========================================
+[2026-07-06 14:07:29.085] [INFO ] [main] TEST START: testHighSpeedTimeAdvancement
+[2026-07-06 14:07:29.086] [INFO ] [main] ========================================
+[2026-07-06 14:07:29.170] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:47.140] [INFO ] [main] TEST END: testHighSpeedTimeAdvancement => PASSED
+[2026-07-06 14:07:47.141] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:47.146] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:47.148] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.149] [INFO ] [main] TEST START: testMultipleTimeouts
+[2026-07-06 14:07:47.149] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.255] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:47.345] [INFO ] [main] TEST END: testMultipleTimeouts => PASSED
+[2026-07-06 14:07:47.346] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:47.350] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:47.352] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.353] [INFO ] [main] TEST START: testPartialCountdownAdvance
+[2026-07-06 14:07:47.353] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.444] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:47.548] [INFO ] [main] TEST END: testPartialCountdownAdvance => PASSED
+[2026-07-06 14:07:47.548] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:47.553] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:47.555] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.555] [INFO ] [main] TEST START: testZeroTimeAdvancement
+[2026-07-06 14:07:47.555] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.628] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:47.709] [INFO ] [main] TEST END: testZeroTimeAdvancement => PASSED
+[2026-07-06 14:07:47.709] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:47.714] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:47.716] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.717] [INFO ] [main] TEST START: testDateStringRepresentation
+[2026-07-06 14:07:47.717] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.797] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:47.878] [INFO ] [main] TEST END: testDateStringRepresentation => PASSED
+[2026-07-06 14:07:47.878] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:47.882] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:47.884] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.885] [INFO ] [main] TEST START: testClockPersistenceAcrossNavigation
+[2026-07-06 14:07:47.885] [INFO ] [main] ========================================
+[2026-07-06 14:07:47.968] [INFO ] [main] New browser context and page created
+[2026-07-06 14:07:48.015] [INFO ] [main] TEST END: testClockPersistenceAcrossNavigation => PASSED
+[2026-07-06 14:07:48.015] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:07:48.020] [DEBUG] [main] Browser context closed
+[2026-07-06 14:07:48.110] [INFO ] [main] Browser closed
+[2026-07-06 14:07:48.164] [INFO ] [main] Playwright instance closed
+[2026-07-06 14:07:48.165] [INFO ] [main] ################################################
+[2026-07-06 14:07:48.165] [INFO ] [main] SUITE COMPLETED
+[2026-07-06 14:07:48.165] [INFO ] [main] ################################################
+[2026-07-06 14:08:18.843] [INFO ] [main] ################################################
+[2026-07-06 14:08:18.845] [INFO ] [main] SUITE START: SauceDemo Automation Suite
+[2026-07-06 14:08:18.845] [INFO ] [main] Configuration loaded successfully
+[2026-07-06 14:08:18.846] [INFO ] [main] Browser: chromium
+[2026-07-06 14:08:18.846] [INFO ] [main] Headless: true
+[2026-07-06 14:08:18.847] [INFO ] [main] Base URL: https://www.saucedemo.com
+[2026-07-06 14:08:18.847] [INFO ] [main] ################################################
+[2026-07-06 14:08:24.580] [INFO ] [main] Playwright instance created
+[2026-07-06 14:08:24.603] [INFO ] [main] Launching browser: chromium | headless: true | slowMotion: 0ms
+[2026-07-06 14:08:24.782] [INFO ] [main] chromium browser launched
+[2026-07-06 14:08:24.797] [INFO ] [main] ========================================
+[2026-07-06 14:08:24.798] [INFO ] [main] TEST START: testClockInitialization
+[2026-07-06 14:08:24.799] [INFO ] [main] ========================================
+[2026-07-06 14:08:24.910] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:25.048] [INFO ] [main] Clock initialized
+[2026-07-06 14:08:25.059] [INFO ] [main] TEST END: testClockInitialization => PASSED
+[2026-07-06 14:08:25.060] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:25.068] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:25.072] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.072] [INFO ] [main] TEST START: testClockSetFixedTime
+[2026-07-06 14:08:25.073] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.155] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:25.196] [INFO ] [main] TEST END: testClockSetFixedTime => PASSED
+[2026-07-06 14:08:25.197] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:25.203] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:25.206] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.206] [INFO ] [main] TEST START: testClockRunFor
+[2026-07-06 14:08:25.206] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.293] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:25.419] [INFO ] [main] TEST END: testClockRunFor => PASSED
+[2026-07-06 14:08:25.419] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:25.425] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:25.427] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.427] [INFO ] [main] TEST START: testClockFastForward
+[2026-07-06 14:08:25.428] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.502] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:25.686] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testClockFastForward_2026-07-06_14-08-25.png
+[2026-07-06 14:08:25.686] [ERROR] [main] Test FAILED: testClockFastForward
+[2026-07-06 14:08:25.687] [ERROR] [main] Error: Error {
+  message='Clock only understands numbers, 'mm:ss' and 'hh:mm:ss'
+  name='Error
+  stack='Error: Clock only understands numbers, 'mm:ss' and 'hh:mm:ss'
+    at parseTicks (C:\Users\BJIT\AppData\Local\Temp\playwright-java-1995302175258107706\package\lib\server\clock.js:110:11)
+    at Clock.fastForward (C:\Users\BJIT\AppData\Local\Temp\playwright-java-1995302175258107706\package\lib\server\clock.js:37:25)
+    at async BrowserContextDispatcher.clockFastForward (C:\Users\BJIT\AppData\Local\Temp\playwright-java-1995302175258107706\package\lib\server\dispatchers\browserContextDispatcher.js:335:5)
+    at async LongStandingScope._race (C:\Users\BJIT\AppData\Local\Temp\playwright-java-1995302175258107706\package\lib\utils\manualPromise.js:96:14)
+}
+[2026-07-06 14:08:25.687] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testClockFastForward_2026-07-06_14-08-25.png
+[2026-07-06 14:08:25.688] [INFO ] [main] TEST END: testClockFastForward => FAILED
+[2026-07-06 14:08:25.688] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:25.692] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:25.695] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.695] [INFO ] [main] TEST START: testClockPauseAt
+[2026-07-06 14:08:25.696] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.785] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:25.857] [INFO ] [main] TEST END: testClockPauseAt => PASSED
+[2026-07-06 14:08:25.858] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:25.862] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:25.865] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.865] [INFO ] [main] TEST START: testClockResume
+[2026-07-06 14:08:25.866] [INFO ] [main] ========================================
+[2026-07-06 14:08:25.946] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:26.033] [INFO ] [main] TEST END: testClockResume => PASSED
+[2026-07-06 14:08:26.033] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:26.038] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:26.040] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.040] [INFO ] [main] TEST START: testTimeoutExecution
+[2026-07-06 14:08:26.040] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.116] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:26.191] [INFO ] [main] TEST END: testTimeoutExecution => PASSED
+[2026-07-06 14:08:26.191] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:26.195] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:26.198] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.198] [INFO ] [main] TEST START: testIntervalExecution
+[2026-07-06 14:08:26.198] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.281] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:26.360] [INFO ] [main] TEST END: testIntervalExecution => PASSED
+[2026-07-06 14:08:26.360] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:26.364] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:26.367] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.367] [INFO ] [main] TEST START: testCountdownToExpiry
+[2026-07-06 14:08:26.367] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.461] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:26.572] [INFO ] [main] TEST END: testCountdownToExpiry => PASSED
+[2026-07-06 14:08:26.573] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:26.578] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:26.580] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.580] [INFO ] [main] TEST START: testAnimationFrameTiming
+[2026-07-06 14:08:26.580] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.654] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:26.827] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testAnimationFrameTiming_2026-07-06_14-08-26.png
+[2026-07-06 14:08:26.828] [ERROR] [main] Test FAILED: testAnimationFrameTiming
+[2026-07-06 14:08:26.828] [ERROR] [main] Error: Error {
+  message='Clock only understands numbers, 'mm:ss' and 'hh:mm:ss'
+  name='Error
+  stack='Error: Clock only understands numbers, 'mm:ss' and 'hh:mm:ss'
+    at parseTicks (C:\Users\BJIT\AppData\Local\Temp\playwright-java-1995302175258107706\package\lib\server\clock.js:110:11)
+    at Clock.fastForward (C:\Users\BJIT\AppData\Local\Temp\playwright-java-1995302175258107706\package\lib\server\clock.js:37:25)
+    at async BrowserContextDispatcher.clockFastForward (C:\Users\BJIT\AppData\Local\Temp\playwright-java-1995302175258107706\package\lib\server\dispatchers\browserContextDispatcher.js:335:5)
+    at async LongStandingScope._race (C:\Users\BJIT\AppData\Local\Temp\playwright-java-1995302175258107706\package\lib\utils\manualPromise.js:96:14)
+}
+[2026-07-06 14:08:26.828] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testAnimationFrameTiming_2026-07-06_14-08-26.png
+[2026-07-06 14:08:26.828] [INFO ] [main] TEST END: testAnimationFrameTiming => FAILED
+[2026-07-06 14:08:26.829] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:26.833] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:26.837] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.838] [INFO ] [main] TEST START: testHighSpeedTimeAdvancement
+[2026-07-06 14:08:26.838] [INFO ] [main] ========================================
+[2026-07-06 14:08:26.912] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:44.905] [INFO ] [main] TEST END: testHighSpeedTimeAdvancement => PASSED
+[2026-07-06 14:08:44.907] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:44.911] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:44.914] [INFO ] [main] ========================================
+[2026-07-06 14:08:44.914] [INFO ] [main] TEST START: testMultipleTimeouts
+[2026-07-06 14:08:44.914] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.230] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:45.314] [INFO ] [main] TEST END: testMultipleTimeouts => PASSED
+[2026-07-06 14:08:45.314] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:45.319] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:45.322] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.323] [INFO ] [main] TEST START: testPartialCountdownAdvance
+[2026-07-06 14:08:45.323] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.423] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:45.526] [INFO ] [main] TEST END: testPartialCountdownAdvance => PASSED
+[2026-07-06 14:08:45.526] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:45.532] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:45.536] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.537] [INFO ] [main] TEST START: testZeroTimeAdvancement
+[2026-07-06 14:08:45.537] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.620] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:45.700] [INFO ] [main] TEST END: testZeroTimeAdvancement => PASSED
+[2026-07-06 14:08:45.700] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:45.706] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:45.708] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.709] [INFO ] [main] TEST START: testDateStringRepresentation
+[2026-07-06 14:08:45.709] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.796] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:45.872] [INFO ] [main] TEST END: testDateStringRepresentation => PASSED
+[2026-07-06 14:08:45.872] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:45.879] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:45.881] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.882] [INFO ] [main] TEST START: testClockPersistenceAcrossNavigation
+[2026-07-06 14:08:45.882] [INFO ] [main] ========================================
+[2026-07-06 14:08:45.974] [INFO ] [main] New browser context and page created
+[2026-07-06 14:08:46.027] [INFO ] [main] TEST END: testClockPersistenceAcrossNavigation => PASSED
+[2026-07-06 14:08:46.028] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:08:46.032] [DEBUG] [main] Browser context closed
+[2026-07-06 14:08:46.087] [INFO ] [main] Browser closed
+[2026-07-06 14:08:46.128] [INFO ] [main] Playwright instance closed
+[2026-07-06 14:08:46.129] [INFO ] [main] ################################################
+[2026-07-06 14:08:46.129] [INFO ] [main] SUITE COMPLETED
+[2026-07-06 14:08:46.129] [INFO ] [main] ################################################
+[2026-07-06 14:09:16.863] [INFO ] [main] ################################################
+[2026-07-06 14:09:16.864] [INFO ] [main] SUITE START: SauceDemo Automation Suite
+[2026-07-06 14:09:16.865] [INFO ] [main] Configuration loaded successfully
+[2026-07-06 14:09:16.865] [INFO ] [main] Browser: chromium
+[2026-07-06 14:09:16.866] [INFO ] [main] Headless: true
+[2026-07-06 14:09:16.867] [INFO ] [main] Base URL: https://www.saucedemo.com
+[2026-07-06 14:09:16.867] [INFO ] [main] ################################################
+[2026-07-06 14:09:26.158] [INFO ] [main] Playwright instance created
+[2026-07-06 14:09:26.182] [INFO ] [main] Launching browser: chromium | headless: true | slowMotion: 0ms
+[2026-07-06 14:09:26.376] [INFO ] [main] chromium browser launched
+[2026-07-06 14:09:26.392] [INFO ] [main] ========================================
+[2026-07-06 14:09:26.393] [INFO ] [main] TEST START: testClockInitialization
+[2026-07-06 14:09:26.393] [INFO ] [main] ========================================
+[2026-07-06 14:09:26.539] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:26.696] [INFO ] [main] Clock initialized
+[2026-07-06 14:09:26.707] [INFO ] [main] TEST END: testClockInitialization => PASSED
+[2026-07-06 14:09:26.707] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:26.718] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:26.722] [INFO ] [main] ========================================
+[2026-07-06 14:09:26.722] [INFO ] [main] TEST START: testClockSetFixedTime
+[2026-07-06 14:09:26.722] [INFO ] [main] ========================================
+[2026-07-06 14:09:26.830] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:26.881] [INFO ] [main] TEST END: testClockSetFixedTime => PASSED
+[2026-07-06 14:09:26.882] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:26.887] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:26.890] [INFO ] [main] ========================================
+[2026-07-06 14:09:26.890] [INFO ] [main] TEST START: testClockRunFor
+[2026-07-06 14:09:26.891] [INFO ] [main] ========================================
+[2026-07-06 14:09:26.985] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:27.108] [INFO ] [main] TEST END: testClockRunFor => PASSED
+[2026-07-06 14:09:27.109] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:27.115] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:27.118] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.119] [INFO ] [main] TEST START: testClockFastForward
+[2026-07-06 14:09:27.119] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.202] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:27.404] [INFO ] [main] Screenshot saved: reports/screenshots/FAIL_testClockFastForward_2026-07-06_14-09-27.png
+[2026-07-06 14:09:27.405] [ERROR] [main] Test FAILED: testClockFastForward
+[2026-07-06 14:09:27.405] [ERROR] [main] Error: Countdown should be at 5 expected [true] but found [false]
+[2026-07-06 14:09:27.406] [ERROR] [main] Screenshot: reports/screenshots/FAIL_testClockFastForward_2026-07-06_14-09-27.png
+[2026-07-06 14:09:27.406] [INFO ] [main] TEST END: testClockFastForward => FAILED
+[2026-07-06 14:09:27.407] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:27.411] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:27.414] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.414] [INFO ] [main] TEST START: testClockPauseAt
+[2026-07-06 14:09:27.415] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.515] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:27.605] [INFO ] [main] TEST END: testClockPauseAt => PASSED
+[2026-07-06 14:09:27.606] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:27.610] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:27.613] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.613] [INFO ] [main] TEST START: testClockResume
+[2026-07-06 14:09:27.614] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.706] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:27.804] [INFO ] [main] TEST END: testClockResume => PASSED
+[2026-07-06 14:09:27.805] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:27.810] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:27.813] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.813] [INFO ] [main] TEST START: testTimeoutExecution
+[2026-07-06 14:09:27.814] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.906] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:27.990] [INFO ] [main] TEST END: testTimeoutExecution => PASSED
+[2026-07-06 14:09:27.991] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:27.995] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:27.998] [INFO ] [main] ========================================
+[2026-07-06 14:09:27.998] [INFO ] [main] TEST START: testIntervalExecution
+[2026-07-06 14:09:27.999] [INFO ] [main] ========================================
+[2026-07-06 14:09:28.095] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:28.177] [INFO ] [main] TEST END: testIntervalExecution => PASSED
+[2026-07-06 14:09:28.177] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:28.181] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:28.184] [INFO ] [main] ========================================
+[2026-07-06 14:09:28.185] [INFO ] [main] TEST START: testCountdownToExpiry
+[2026-07-06 14:09:28.185] [INFO ] [main] ========================================
+[2026-07-06 14:09:28.273] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:28.387] [INFO ] [main] TEST END: testCountdownToExpiry => PASSED
+[2026-07-06 14:09:28.387] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:28.393] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:28.395] [INFO ] [main] ========================================
+[2026-07-06 14:09:28.396] [INFO ] [main] TEST START: testAnimationFrameTiming
+[2026-07-06 14:09:28.396] [INFO ] [main] ========================================
+[2026-07-06 14:09:28.485] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:28.578] [INFO ] [main] TEST END: testAnimationFrameTiming => PASSED
+[2026-07-06 14:09:28.579] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:28.583] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:28.585] [INFO ] [main] ========================================
+[2026-07-06 14:09:28.585] [INFO ] [main] TEST START: testHighSpeedTimeAdvancement
+[2026-07-06 14:09:28.586] [INFO ] [main] ========================================
+[2026-07-06 14:09:28.676] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:46.620] [INFO ] [main] TEST END: testHighSpeedTimeAdvancement => PASSED
+[2026-07-06 14:09:46.621] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:46.626] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:46.628] [INFO ] [main] ========================================
+[2026-07-06 14:09:46.628] [INFO ] [main] TEST START: testMultipleTimeouts
+[2026-07-06 14:09:46.629] [INFO ] [main] ========================================
+[2026-07-06 14:09:46.725] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:46.805] [INFO ] [main] TEST END: testMultipleTimeouts => PASSED
+[2026-07-06 14:09:46.806] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:46.810] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:46.812] [INFO ] [main] ========================================
+[2026-07-06 14:09:46.813] [INFO ] [main] TEST START: testPartialCountdownAdvance
+[2026-07-06 14:09:46.813] [INFO ] [main] ========================================
+[2026-07-06 14:09:46.905] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:47.003] [INFO ] [main] TEST END: testPartialCountdownAdvance => PASSED
+[2026-07-06 14:09:47.003] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:47.008] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:47.010] [INFO ] [main] ========================================
+[2026-07-06 14:09:47.010] [INFO ] [main] TEST START: testZeroTimeAdvancement
+[2026-07-06 14:09:47.011] [INFO ] [main] ========================================
+[2026-07-06 14:09:47.100] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:47.188] [INFO ] [main] TEST END: testZeroTimeAdvancement => PASSED
+[2026-07-06 14:09:47.188] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:47.193] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:47.195] [INFO ] [main] ========================================
+[2026-07-06 14:09:47.195] [INFO ] [main] TEST START: testDateStringRepresentation
+[2026-07-06 14:09:47.195] [INFO ] [main] ========================================
+[2026-07-06 14:09:47.271] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:47.359] [INFO ] [main] TEST END: testDateStringRepresentation => PASSED
+[2026-07-06 14:09:47.361] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:47.363] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:47.366] [INFO ] [main] ========================================
+[2026-07-06 14:09:47.366] [INFO ] [main] TEST START: testClockPersistenceAcrossNavigation
+[2026-07-06 14:09:47.366] [INFO ] [main] ========================================
+[2026-07-06 14:09:47.447] [INFO ] [main] New browser context and page created
+[2026-07-06 14:09:47.500] [INFO ] [main] TEST END: testClockPersistenceAcrossNavigation => PASSED
+[2026-07-06 14:09:47.501] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:09:47.506] [DEBUG] [main] Browser context closed
+[2026-07-06 14:09:47.596] [INFO ] [main] Browser closed
+[2026-07-06 14:09:47.638] [INFO ] [main] Playwright instance closed
+[2026-07-06 14:09:47.639] [INFO ] [main] ################################################
+[2026-07-06 14:09:47.639] [INFO ] [main] SUITE COMPLETED
+[2026-07-06 14:09:47.639] [INFO ] [main] ################################################
+[2026-07-06 14:10:04.737] [INFO ] [main] ################################################
+[2026-07-06 14:10:04.738] [INFO ] [main] SUITE START: SauceDemo Automation Suite
+[2026-07-06 14:10:04.738] [INFO ] [main] Configuration loaded successfully
+[2026-07-06 14:10:04.739] [INFO ] [main] Browser: chromium
+[2026-07-06 14:10:04.739] [INFO ] [main] Headless: true
+[2026-07-06 14:10:04.739] [INFO ] [main] Base URL: https://www.saucedemo.com
+[2026-07-06 14:10:04.740] [INFO ] [main] ################################################
+[2026-07-06 14:10:10.074] [INFO ] [main] Playwright instance created
+[2026-07-06 14:10:10.096] [INFO ] [main] Launching browser: chromium | headless: true | slowMotion: 0ms
+[2026-07-06 14:10:10.249] [INFO ] [main] chromium browser launched
+[2026-07-06 14:10:10.262] [INFO ] [main] ========================================
+[2026-07-06 14:10:10.263] [INFO ] [main] TEST START: testClockInitialization
+[2026-07-06 14:10:10.263] [INFO ] [main] ========================================
+[2026-07-06 14:10:10.393] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:10.518] [INFO ] [main] Clock initialized
+[2026-07-06 14:10:10.529] [INFO ] [main] TEST END: testClockInitialization => PASSED
+[2026-07-06 14:10:10.530] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:10.540] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:10.544] [INFO ] [main] ========================================
+[2026-07-06 14:10:10.545] [INFO ] [main] TEST START: testClockSetFixedTime
+[2026-07-06 14:10:10.545] [INFO ] [main] ========================================
+[2026-07-06 14:10:10.632] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:10.670] [INFO ] [main] TEST END: testClockSetFixedTime => PASSED
+[2026-07-06 14:10:10.671] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:10.675] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:10.678] [INFO ] [main] ========================================
+[2026-07-06 14:10:10.678] [INFO ] [main] TEST START: testClockRunFor
+[2026-07-06 14:10:10.678] [INFO ] [main] ========================================
+[2026-07-06 14:10:10.769] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:10.894] [INFO ] [main] TEST END: testClockRunFor => PASSED
+[2026-07-06 14:10:10.895] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:10.899] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:10.902] [INFO ] [main] ========================================
+[2026-07-06 14:10:10.902] [INFO ] [main] TEST START: testClockFastForward
+[2026-07-06 14:10:10.902] [INFO ] [main] ========================================
+[2026-07-06 14:10:10.982] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:11.078] [INFO ] [main] TEST END: testClockFastForward => PASSED
+[2026-07-06 14:10:11.079] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:11.085] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:11.088] [INFO ] [main] ========================================
+[2026-07-06 14:10:11.089] [INFO ] [main] TEST START: testClockPauseAt
+[2026-07-06 14:10:11.089] [INFO ] [main] ========================================
+[2026-07-06 14:10:11.179] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:11.270] [INFO ] [main] TEST END: testClockPauseAt => PASSED
+[2026-07-06 14:10:11.271] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:11.276] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:11.280] [INFO ] [main] ========================================
+[2026-07-06 14:10:11.280] [INFO ] [main] TEST START: testClockResume
+[2026-07-06 14:10:11.280] [INFO ] [main] ========================================
+[2026-07-06 14:10:11.381] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:11.500] [INFO ] [main] TEST END: testClockResume => PASSED
+[2026-07-06 14:10:11.500] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:11.506] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:11.510] [INFO ] [main] ========================================
+[2026-07-06 14:10:11.510] [INFO ] [main] TEST START: testTimeoutExecution
+[2026-07-06 14:10:11.511] [INFO ] [main] ========================================
+[2026-07-06 14:10:11.610] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:11.727] [INFO ] [main] TEST END: testTimeoutExecution => PASSED
+[2026-07-06 14:10:11.728] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:11.733] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:11.737] [INFO ] [main] ========================================
+[2026-07-06 14:10:11.738] [INFO ] [main] TEST START: testIntervalExecution
+[2026-07-06 14:10:11.738] [INFO ] [main] ========================================
+[2026-07-06 14:10:11.911] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:12.037] [INFO ] [main] TEST END: testIntervalExecution => PASSED
+[2026-07-06 14:10:12.037] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:12.044] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:12.049] [INFO ] [main] ========================================
+[2026-07-06 14:10:12.049] [INFO ] [main] TEST START: testCountdownToExpiry
+[2026-07-06 14:10:12.050] [INFO ] [main] ========================================
+[2026-07-06 14:10:12.194] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:12.343] [INFO ] [main] TEST END: testCountdownToExpiry => PASSED
+[2026-07-06 14:10:12.343] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:12.351] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:12.355] [INFO ] [main] ========================================
+[2026-07-06 14:10:12.356] [INFO ] [main] TEST START: testAnimationFrameTiming
+[2026-07-06 14:10:12.357] [INFO ] [main] ========================================
+[2026-07-06 14:10:12.475] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:12.588] [INFO ] [main] TEST END: testAnimationFrameTiming => PASSED
+[2026-07-06 14:10:12.588] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:12.597] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:12.601] [INFO ] [main] ========================================
+[2026-07-06 14:10:12.602] [INFO ] [main] TEST START: testHighSpeedTimeAdvancement
+[2026-07-06 14:10:12.603] [INFO ] [main] ========================================
+[2026-07-06 14:10:12.709] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:31.301] [INFO ] [main] TEST END: testHighSpeedTimeAdvancement => PASSED
+[2026-07-06 14:10:31.302] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:31.307] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:31.308] [INFO ] [main] ========================================
+[2026-07-06 14:10:31.309] [INFO ] [main] TEST START: testMultipleTimeouts
+[2026-07-06 14:10:31.309] [INFO ] [main] ========================================
+[2026-07-06 14:10:31.403] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:31.492] [INFO ] [main] TEST END: testMultipleTimeouts => PASSED
+[2026-07-06 14:10:31.492] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:31.496] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:31.500] [INFO ] [main] ========================================
+[2026-07-06 14:10:31.501] [INFO ] [main] TEST START: testPartialCountdownAdvance
+[2026-07-06 14:10:31.502] [INFO ] [main] ========================================
+[2026-07-06 14:10:31.591] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:31.695] [INFO ] [main] TEST END: testPartialCountdownAdvance => PASSED
+[2026-07-06 14:10:31.696] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:31.704] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:31.708] [INFO ] [main] ========================================
+[2026-07-06 14:10:31.709] [INFO ] [main] TEST START: testZeroTimeAdvancement
+[2026-07-06 14:10:31.710] [INFO ] [main] ========================================
+[2026-07-06 14:10:31.802] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:31.892] [INFO ] [main] TEST END: testZeroTimeAdvancement => PASSED
+[2026-07-06 14:10:31.892] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:31.897] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:31.900] [INFO ] [main] ========================================
+[2026-07-06 14:10:31.900] [INFO ] [main] TEST START: testDateStringRepresentation
+[2026-07-06 14:10:31.900] [INFO ] [main] ========================================
+[2026-07-06 14:10:31.982] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:32.054] [INFO ] [main] TEST END: testDateStringRepresentation => PASSED
+[2026-07-06 14:10:32.055] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:32.060] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:32.064] [INFO ] [main] ========================================
+[2026-07-06 14:10:32.064] [INFO ] [main] TEST START: testClockPersistenceAcrossNavigation
+[2026-07-06 14:10:32.065] [INFO ] [main] ========================================
+[2026-07-06 14:10:32.145] [INFO ] [main] New browser context and page created
+[2026-07-06 14:10:32.199] [INFO ] [main] TEST END: testClockPersistenceAcrossNavigation => PASSED
+[2026-07-06 14:10:32.199] [INFO ] [main] ----------------------------------------
+[2026-07-06 14:10:32.203] [DEBUG] [main] Browser context closed
+[2026-07-06 14:10:32.269] [INFO ] [main] Browser closed
+[2026-07-06 14:10:32.310] [INFO ] [main] Playwright instance closed
+[2026-07-06 14:10:32.310] [INFO ] [main] ################################################
+[2026-07-06 14:10:32.311] [INFO ] [main] SUITE COMPLETED
+[2026-07-06 14:10:32.312] [INFO ] [main] ################################################

@@ -61,4 +61,34 @@
         </classes>
     </test>
 
+    <test name="Browsers Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.BrowsersTest"/>
+        </classes>
+    </test>
+
+    <test name="Dialogs Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.DialogsTest"/>
+        </classes>
+    </test>
+
+    <test name="Clock Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.ClockTest"/>
+        </classes>
+    </test>
+
+    <test name="AutoWaiting Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.AutoWaitingTest"/>
+        </classes>
+    </test>
+
+    <test name="Actionability Tests">
+        <classes>
+            <class name="com.bjit.ecauto.tests.ActionabilityTest"/>
+        </classes>
+    </test>
+
 </suite>
